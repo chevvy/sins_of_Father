@@ -1,0 +1,14 @@
+[gd_scene load_steps=8 format=3 uid="uid://dstr5dso05ljk"]
+
+[ext_resource type="Script" path="res://Player/Input/player_input_manager.gd" id="1_sv10y"]
+[ext_resource type="Resource" uid="uid://do5p7h53evujl" path="res://Player/Input/PlayerInputMaps/PlayerInputRessource0.tres" id="2_hg4yi"]
+[ext_resource type="Resource" uid="uid://b71crt3lkk1ws" path="res://Player/Input/PlayerInputMaps/PlayerInputRessource1.tres" id="3_73bss"]
+[ext_resource type="Resource" uid="uid://ckvcmsbtmrmll" path="res://Player/Input/PlayerInputMaps/PlayerInputRessource2.tres" id="4_udx06"]
+[ext_resource type="Resource" uid="uid://dludqtg5bso14" path="res://Player/Input/PlayerInputMaps/PlayerInputRessource3.tres" id="5_khxoc"]
+[ext_resource type="Resource" uid="uid://diw41loh47sxk" path="res://Player/Input/PlayerInputMaps/PlayerInputRessourceKb.tres" id="6_e5b2d"]
+[ext_resource type="PackedScene" uid="uid://c7i6adu8qeqty" path="res://Player/Player.tscn" id="7_lllta"]
+
+[node name="PlayerInputSystems" type="Node"]
+script = ExtResource("1_sv10y")
+inputMaps = Array[Resource("res://Player/Input/PlayerInputMaps/player_input_map.gd")]([ExtResource("2_hg4yi"), ExtResource("3_73bss"), ExtResource("4_udx06"), ExtResource("5_khxoc"), ExtResource("6_e5b2d")])
+playerScene = ExtResource("7_lllta")

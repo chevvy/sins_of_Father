@@ -1,4 +1,4 @@
-extends CharacterBody3D
+class_name Player extends CharacterBody3D
 
 
 const SPEED = 5.0
@@ -7,8 +7,21 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+var current_player_id: int
+var current_input_map: PlayerInputMap
+
+func set_player_settings(player_id: int, input_map: PlayerInputMap):
+	current_player_id = player_id
+	current_input_map = input_map
+	
+
+func _is_player_ready():
+	return current_player_id != null and current_input_map != null
+
 
 func _physics_process(delta):
+	if not _is_player_ready():
+		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
