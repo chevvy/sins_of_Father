@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2bxoaditrw1i"]
+
+[sub_resource type="Environment" id="Environment_dbcvv"]
+ssao_enabled = true
+
+[node name="WorldEnvironment2" type="WorldEnvironment"]
+environment = SubResource("Environment_dbcvv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.924799, 0.380457, 0, -0.380457, 0.924799, 0, 0, 0)
+light_color = Color(1, 1, 1, 1)
+shadow_enabled = true
+
+[node name="ReflectionProbe" type="Node3D" parent="."]
+
+[node name="CameraPivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(0.775628, -0.165289, 0.609164, -0.162885, 0.879999, 0.446173, -0.609811, -0.445288, 0.655629, 15.8692, 13.7125, 18.9371)
+projection = 1
+size = 22.0
+near = 0.1
+far = 1000.0
