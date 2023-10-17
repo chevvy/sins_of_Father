@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0lhsaljjxagk"]
+[gd_scene load_steps=5 format=3 uid="uid://d0lhsaljjxagk"]
 
 [ext_resource type="PackedScene" uid="uid://dfihjb47icua3" path="res://Environment/ground.tscn" id="1_lax2e"]
-[ext_resource type="Environment" uid="uid://dg8qd1ptwwilr" path="res://Environment/default_environment.tres" id="2_gi5kq"]
+[ext_resource type="PackedScene" uid="uid://b2bxoaditrw1i" path="res://Environment/WorldEnvironment.tscn" id="3_07i0q"]
+[ext_resource type="PackedScene" uid="uid://dtsr5n0n2w4jj" path="res://Environment/Track.tscn" id="3_h0ngw"]
 [ext_resource type="PackedScene" uid="uid://dstr5dso05ljk" path="res://Player/Input/PlayerInputSystems.tscn" id="3_vkeb7"]
 
 [node name="Main" type="Node"]
@@ -9,19 +10,8 @@
 [node name="Ground" parent="." instance=ExtResource("1_lax2e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.5, 2.08165e-12)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("2_gi5kq")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.924799, 0.380457, 0, -0.380457, 0.924799, 0, 0, 0)
-shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="WorldEnvironment"]
-transform = Transform3D(0.775628, -0.165289, 0.609164, 1.01614e-17, 0.965103, 0.261869, -0.63119, -0.203113, 0.748561, 14.5894, 8.25653, 19.4365)
-environment = ExtResource("2_gi5kq")
-projection = 1
-size = 30.0
-
-[node name="ReflectionProbe" type="ReflectionProbe" parent="WorldEnvironment"]
-
 [node name="PlayerInputSystems" parent="." instance=ExtResource("3_vkeb7")]
+
+[node name="track" parent="." instance=ExtResource("3_h0ngw")]
+
+[node name="world_environment" parent="." instance=ExtResource("3_07i0q")]
