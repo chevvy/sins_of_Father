@@ -27,12 +27,17 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle Jump.
+	# TODO should we use jump loL? 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var move_left = current_input_map.move_left
+	var move_right = current_input_map.move_right
+	var move_forward = current_input_map.move_forward
+	var move_backward = current_input_map.move_backward
+	var input_dir = Input.get_vector(move_left, move_right, move_forward, move_backward)
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
