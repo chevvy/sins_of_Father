@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0lhsaljjxagk"]
+[gd_scene load_steps=7 format=3 uid="uid://d0lhsaljjxagk"]
 
 [ext_resource type="PackedScene" uid="uid://dfihjb47icua3" path="res://Environment/ground.tscn" id="1_lax2e"]
 [ext_resource type="PackedScene" uid="uid://b2bxoaditrw1i" path="res://Environment/WorldEnvironment.tscn" id="3_07i0q"]
 [ext_resource type="PackedScene" uid="uid://dtsr5n0n2w4jj" path="res://Environment/Track.tscn" id="3_h0ngw"]
 [ext_resource type="PackedScene" uid="uid://dstr5dso05ljk" path="res://Player/Input/PlayerInputSystems.tscn" id="3_vkeb7"]
 [ext_resource type="PackedScene" uid="uid://c1oh5ybft5iqd" path="res://Environment/Clock/Clock.tscn" id="5_8oghq"]
+[ext_resource type="PackedScene" uid="uid://cidynks8xeyjy" path="res://Items/possessable.tscn" id="5_ie5fg"]
 
 [node name="Main" type="Node"]
 
@@ -18,3 +19,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -0.5, 2.08165e-1
 [node name="world_environment" parent="." instance=ExtResource("3_07i0q")]
 
 [node name="Clock" parent="." instance=ExtResource("5_8oghq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1356, 0, 0)
+
+[node name="Possessables" type="Node" parent="."]
+
+[node name="Possessable" parent="Possessables" instance=ExtResource("5_ie5fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0373, 0)
+
+[node name="Possessable2" parent="Possessables" instance=ExtResource("5_ie5fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75114, 4.29654, 0)
+
+[node name="Possessable3" parent="Possessables" instance=ExtResource("5_ie5fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.635935, 4.40582, 0)
+
+[node name="Possessable4" parent="Possessables" instance=ExtResource("5_ie5fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.76677, 1.01234)
+
+[node name="Possessable5" parent="Possessables" instance=ExtResource("5_ie5fg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.905647, 3.92927, 0)
