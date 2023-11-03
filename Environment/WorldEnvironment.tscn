@@ -8,7 +8,6 @@ environment = SubResource("Environment_dbcvv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.924799, 0.380457, 0, -0.380457, 0.924799, 0, 0, 0)
-light_color = Color(1, 1, 1, 1)
 shadow_enabled = true
 
 [node name="ReflectionProbe" type="Node3D" parent="."]
