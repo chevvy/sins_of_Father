@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dvtg5ljajf24o"]
+
+[ext_resource type="Texture2D" uid="uid://dpejh37yuy5ad" path="res://ImportedAssets/Assets/Table_C.png" id="1_x3kny"]
+[ext_resource type="Texture2D" uid="uid://drvd0qiewdf6d" path="res://ImportedAssets/Assets/Table_ORM.png" id="2_4wxue"]
+
+[resource]
+albedo_texture = ExtResource("1_x3kny")
+metallic = 1.0
+metallic_texture = ExtResource("2_4wxue")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_4wxue")
+roughness_texture_channel = 1
