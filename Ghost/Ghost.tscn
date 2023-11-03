@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://yuxpn5dl0q2b"]
+
+[ext_resource type="PackedScene" uid="uid://dehsxsy5nww0i" path="res://ImportedAssets/Ghost/Ghost_Rig.glb" id="1_7akds"]
+
+[node name="Ghost_Rig" instance=ExtResource("1_7akds")]
