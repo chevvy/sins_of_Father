@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://mrjk2br6l14"]
+
+[ext_resource type="PackedScene" uid="uid://bfiutb6kaw6jb" path="res://ImportedAssets/Character/Character_Rig.glb" id="1_gril0"]
+
+[node name="Character_Rig" instance=ExtResource("1_gril0")]
