@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1oh5ybft5iqd"]
+
+[ext_resource type="PackedScene" uid="uid://dpdv1s07eekkr" path="res://ImportedAssets/Clock/Clock.glb" id="1_rtp5v"]
+
+[node name="Clock" type="Node3D"]
+
+[node name="ClockAsset" parent="." instance=ExtResource("1_rtp5v")]
