@@ -1,5 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://yuxpn5dl0q2b"]
+[gd_scene load_steps=7 format=3 uid="uid://yuxpn5dl0q2b"]
 
 [ext_resource type="PackedScene" uid="uid://dehsxsy5nww0i" path="res://ImportedAssets/Ghost/Ghost_Rig.glb" id="1_7akds"]
+[ext_resource type="Script" path="res://Ghost/Ghost.gd" id="2_5m6b8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_slhu2"]
+radius = 0.0507601
+height = 0.507601
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_puypr"]
+radius = 0.0507601
+height = 0.507601
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_50ksa"]
+radius = 0.0507601
+height = 0.507601
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g8o1f"]
+size = Vector2(20, 20)
 
 [node name="Ghost_Rig" instance=ExtResource("1_7akds")]
+
+[node name="Ghost" parent="." index="0"]
+script = ExtResource("2_5m6b8")
+
+[node name="Skeleton3D" parent="Ghost" index="0"]
+bones/1/position = Vector3(-2.00048e-14, 0.507601, 1.11629e-15)
+
+[node name="Physical Bone Spine_01" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="1"]
+transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.78875e-08, 1, 1.4627e-08, 3.8147e-06, 0.253802, 1.01637e-09)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.52159e-06, -4.72843e-09, 0.253802)
+body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.12588e-08, 1, -2.74346e-09, 3.79525e-06, 0.253802, 5.42476e-09)
+can_sleep = false
+bone_name = "Spine_01"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ghost/Skeleton3D/Physical Bone Spine_01" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_slhu2")
+
+[node name="Physical Bone Spine_02" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="2"]
+transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.78902e-08, 1, 1.46282e-08, -3.09944e-06, 0.761401, -1.3642e-08)
+axis_lock_angular_y = true
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43143e-06, 1.11177e-09, 0.253799)
+body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.12616e-08, 1, -2.74226e-09, -3.15779e-06, 0.2538, -4.15824e-10)
+bone_name = "Spine_02"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 180.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ghost/Skeleton3D/Physical Bone Spine_02" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_puypr")
+
+[node name="Physical Bone Spine_03" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="3"]
+transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.78902e-08, 1, 1.46276e-08, 7.72663e-06, 1.26899, -2.08284e-08)
+axis_lock_angular_y = true
+joint_type = 2
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35574e-06, -5.17863e-10, 0.253787)
+body_offset = Transform3D(1, 3.16192e-12, -1.07821e-06, -1.07821e-06, -3.55271e-13, -1, 1.12616e-08, 1, -2.74286e-09, 7.62939e-06, 0.253788, 1.21405e-09)
+bone_name = "Spine_03"
+joint_constraints/swing_span = 45.0
+joint_constraints/twist_span = 180.0
+joint_constraints/bias = 0.3
+joint_constraints/softness = 0.8
+joint_constraints/relaxation = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ghost/Skeleton3D/Physical Bone Spine_03" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_50ksa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+mesh = SubResource("PlaneMesh_g8o1f")

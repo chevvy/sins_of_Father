@@ -1,5 +1,61 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtsr5n0n2w4jj"]
+[gd_scene load_steps=5 format=3 uid="uid://dtsr5n0n2w4jj"]
 
 [ext_resource type="PackedScene" uid="uid://ofkqykg0715g" path="res://ImportedAssets/track.gltf" id="1_wxem5"]
+[ext_resource type="Material" uid="uid://dv2xu28lggrjs" path="res://Environment/Material/white_mat.tres" id="2_ybrsy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_227wr"]
+size = Vector2(130, 27)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka733"]
+albedo_color = Color(0.270588, 0.533333, 1, 1)
 
 [node name="track" instance=ExtResource("1_wxem5")]
+
+[node name="MeshInstance3D" parent="Track/TrackBody/CollisionShape3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.107761, 0.149319, -0.00395103)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_227wr")
+surface_material_override/0 = SubResource("StandardMaterial3D_ka733")
+
+[node name="MeshInstance3D2" parent="Track/VerticalLines" index="0"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, 11.4119)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D7" parent="Track/VerticalLines" index="1"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, 12.3383)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D22" parent="Track/VerticalLines" index="2"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, 5.95216)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D3" parent="Track/VerticalLines" index="3"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, -0.00395103)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D4" parent="Track/VerticalLines" index="4"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, -5.96006)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D5" parent="Track/VerticalLines" index="5"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, -11.4198)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D6" parent="Track/VerticalLines" index="6"]
+transform = Transform3D(65.9347, 0, 0, 0, 0.992684, 0, 0, 0, 0.0992685, -0.107761, 0.170743, -12.4486)
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="MeshInstance3D8" parent="Track/StartLine" index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")
+
+[node name="GoalMesh" parent="Track/GoalLine" index="0"]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_ybrsy")

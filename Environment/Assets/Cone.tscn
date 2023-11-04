@@ -46,18 +46,20 @@ font_size = 60
 [sub_resource type="ViewportTexture" id="ViewportTexture_137d6"]
 viewport_path = NodePath("Cone_002/SubViewportContainer/SubViewport")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ceymn"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3ahc0"]
 points = PackedVector3Array(-0.117142, 0.0211212, -0.935565, 0.371855, 1.75707, 0.16737, 0.342977, 1.69045, 0.0571765, -0.975223, 0.107012, 0.437557, 0.917802, 0.0112316, 0.536885, -0.317389, 1.76473, 0.257632, -0.0804707, 1.70412, -0.393859, 0.0913237, 0.381228, -0.994782, -0.880282, 0.0484383, 0.58874, 0.822785, 0.411656, 0.559522, 0.97534, 0.107012, 0.437557, -0.0913983, 0.381228, -0.994782, 0.0293753, 0.0164655, -1.05707, -0.822859, 0.411656, 0.559522, -0.917692, 0.0112255, 0.53689, -0.371646, 1.75727, 0.16762, 0.0804313, 1.70424, -0.393883, 0.317381, 1.76489, 0.257561, -0.853218, 0.381228, 0.315592, 0.853334, 0.381228, 0.315592, 0.880215, 0.0484383, 0.58874, 0.0842443, 0.0840936, -1.02014, -0.213404, 0.411656, -0.781427, 0.213329, 0.411656, -0.781427, -0.0842914, 0.0842164, -1.02002, 0.94479, 0.0764042, 0.376574, 0.883883, 0.411656, 0.437557, -0.883767, 0.411656, 0.437557, -0.343036, 1.69123, 0.0574647, -0.944674, 0.0764042, 0.376574, -0.54849, 0.411656, -0.202677, 0.548606, 0.411656, -0.20251)
 
 [node name="Cone" type="RigidBody3D"]
 script = ExtResource("1_ux01a")
 
 [node name="Cone_002" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_xswju")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_mtfot")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Cone_002"]
+clip_children = 1
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -106,5 +108,6 @@ modulate = Color(0.0705882, 0.0705882, 0.0705882, 1)
 pixel_size = 0.011
 texture = SubResource("ViewportTexture_137d6")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_ceymn")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_3ahc0")

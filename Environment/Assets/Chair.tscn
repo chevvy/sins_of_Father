@@ -41,16 +41,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dvix7")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3gxp8"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n8o46"]
 points = PackedVector3Array(-0.799688, 0.0812623, -0.92752, 0.587847, 1.31347, 0.957207, -0.597346, 1.31347, 0.957207, 0.450982, 2.90841, -0.775041, 0.788097, 0.040721, -0.880895, 0.8025, 0.0600638, 0.851908, -0.73405, 2.68027, -0.775041, -0.8025, 0.0320055, 0.797605, 0.815793, 2.58919, -0.546961, 0.542225, 2.81704, -0.866123, -0.825293, 2.54351, -0.546961, 0.815793, 0.128259, -0.957393, -0.415021, 2.90841, -0.729313, -0.506104, 2.81704, -0.866123, -0.825293, 0.128259, 0.865938, -0.825293, 0.128259, -0.957393, 0.72455, 1.31347, 0.865938, -0.73405, 1.31347, 0.820396, 0.815793, 0.128259, 0.865938, -0.797597, 0.040721, -0.880895, 0.795885, 0.0268783, 0.800489, 0.450982, 2.90841, -0.729313, 0.72455, 2.68027, -0.775041, -0.688429, 2.77164, -0.63823, 0.678929, 2.77164, -0.63823, -0.825293, 2.49811, -0.683771, -0.642807, 2.77164, -0.820582, -0.825293, 2.22458, -0.319068, 0.678929, 1.31347, 0.911479, 0.815793, 0.721007, 0.546775, 0.770172, 2.68027, -0.592502, -0.825293, 0.401791, 0.729127)
 
 [node name="Chair" type="RigidBody3D"]
 
 [node name="Chair_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 material_override = ExtResource("2_cpie7")
 mesh = SubResource("ArrayMesh_dm4b3")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_cpie7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_3gxp8")
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_n8o46")
