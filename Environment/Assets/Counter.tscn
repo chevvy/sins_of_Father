@@ -39,15 +39,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ejiio")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bl7om"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_slaca"]
 points = PackedVector3Array(-1.97087, 0.0238429, -0.8957, 2.22912, 2.5449, 1.06395, 2.25634, 0.304, 1.07713, 2.25634, 0.304, -1.10879, -2.22922, 2.5449, -1.0956, -2.22922, 2.5449, 1.06395, 2.22912, 2.5449, -1.0956, -2.25643, 0.304, 1.07713, 2.0011, 0.0043454, 0.877581, -2.25643, 0.304, -1.10879, -1.9903, 0.0113496, 0.872718, 1.97077, 0.0238429, -0.8957)
 
 [node name="Counter" type="RigidBody3D"]
 
 [node name="Counter_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ppedn")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_0wjad")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_bl7om")
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_slaca")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://mico01s75ed4"]
+[gd_scene load_steps=6 format=3 uid="uid://bwcige5i3nkxw"]
 
-[ext_resource type="Material" uid="uid://degkq5hiffp7k" path="res://Environment/Assets/Panel.tres" id="2_puqnj"]
+[ext_resource type="Material" uid="uid://ikarb0goats4" path="res://Environment/Assets/Panel_02.tres" id="1_pakl4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q44d7"]
 resource_name = "Panel"
@@ -48,7 +48,7 @@ points = PackedVector3Array(2.03175, 2.06349, 0.23799, -1.96964, 0.000681425, -0
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_oacwx")
 skeleton = NodePath("")
-surface_material_override/0 = ExtResource("2_puqnj")
+surface_material_override/0 = ExtResource("1_pakl4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)

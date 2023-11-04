@@ -1,12 +1,13 @@
-extends RigidBody3D
+extends Node3D
 
-@export var label_text = "1"
 
-@onready var label_ref = $Cone_002/SubViewportContainer/SubViewport/Label
+@onready var ghost_skeleton = $Skeleton3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	label_ref.text = label_text
+	
+	ghost_skeleton.physical_bones_start_simulation(["Spine_02","Spine_03","Spine_04"])
+	
 	pass # Replace with function body.
 
 

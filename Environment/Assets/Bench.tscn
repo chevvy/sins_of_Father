@@ -45,6 +45,7 @@ points = PackedVector3Array(-2.96759, 1.62849, -0.093895, 2.97019, 2.6491, -0.09
 [node name="Bench" type="RigidBody3D"]
 
 [node name="Bench_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_k8pif")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_topvl")
