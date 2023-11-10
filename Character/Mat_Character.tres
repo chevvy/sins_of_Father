@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://chnyxxwtpjblt"]
+
+[ext_resource type="Texture2D" uid="uid://yfxkxwkt71uj" path="res://ImportedAssets/Character/Character_Rig_Character_baseColor.png" id="1_dwu3y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ol1t"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.15
+
+[resource]
+resource_name = "Character_Mat"
+next_pass = SubResource("StandardMaterial3D_5ol1t")
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_dwu3y")
+roughness = 0.5
+emission_enabled = true
+emission_texture = ExtResource("1_dwu3y")
