@@ -7,13 +7,19 @@
 radius = 1.895
 height = 3.79
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("knockback_timer")]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_sauk7")
+knockback_timer = NodePath("KnockbackTimer")
 
 [node name="Character" parent="." instance=ExtResource("1_vbs7i")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111796, 1.27804, -0.204642)
 shape = SubResource("CapsuleShape3D_gt3j5")
+
+[node name="KnockbackTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]
