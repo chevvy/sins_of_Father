@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://dv2xu28lggrjs" path="res://Environment/Material/white_mat.tres" id="2_ybrsy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pbm2u"]
-size = Vector3(70, 0.3, 25)
+size = Vector3(70, 0.5, 25)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_227wr"]
 size = Vector2(130, 27)

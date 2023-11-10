@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1xi3wur0rykr"]
+
+[ext_resource type="Texture2D" uid="uid://b5j7qsih1yqg1" path="res://VFX/circle_05.png" id="1_yw4ro"]
+
+[sub_resource type="Curve" id="Curve_b1bqj"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.302326, 1), 0.0, 0.0, 0, 0, Vector2(0.635659, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5qq5k"]
+curve = SubResource("Curve_b1bqj")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ymang"]
+emission_shape = 3
+emission_box_extents = Vector3(5, 5, 30)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 30.0
+scale_min = 0.4
+scale_curve = SubResource("CurveTexture_5qq5k")
+color = Color(1, 0, 0.266667, 1)
+turbulence_noise_strength = 0.1
+turbulence_noise_scale = 0.1
+turbulence_noise_speed = Vector3(1, 1, 1)
+turbulence_noise_speed_random = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2qac"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_yw4ro")
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_qsgow"]
+material = SubResource("StandardMaterial3D_v2qac")
+sections = 12
+section_length = 0.05
+section_segments = 7
+
+[sub_resource type="Gradient" id="Gradient_gvjwt"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bgtt6"]
+noise_type = 3
+frequency = 0.1191
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_5foi8"]
+color_ramp = SubResource("Gradient_gvjwt")
+noise = SubResource("FastNoiseLite_bgtt6")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-0.999997, -0.00182878, -0.00186622, -0.00182564, 0.999997, -0.00168235, 0.0018693, -0.00167893, -0.999997, 34.0386, 10.0087, -0.388026)
+amount = 5
+lifetime = 6.0
+preprocess = 4.0
+speed_scale = 2.0
+randomness = 0.53
+fixed_fps = 60
+visibility_aabb = AABB(-120.313, -14.3366, -72.4717, 240.627, 28.6732, 144.943)
+trail_enabled = true
+trail_lifetime = 1.5
+process_material = SubResource("ParticleProcessMaterial_ymang")
+draw_pass_1 = SubResource("RibbonTrailMesh_qsgow")
+
+[node name="GPUParticlesAttractorVectorField3D" type="GPUParticlesAttractorVectorField3D" parent="."]
+transform = Transform3D(-0.999997, -0.00182878, -0.00186622, -0.00182564, 0.999997, -0.00168235, 0.0018693, -0.00167893, -0.999997, 12.4867, 7.28411, -0.388026)
+strength = 10.0
+attenuation = 0.314594
+size = Vector3(106.873, 39.0844, 76.8284)
+texture = SubResource("NoiseTexture3D_5foi8")
