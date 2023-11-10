@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5fem3n7mbv8l"]
+
+[ext_resource type="Material" uid="uid://dhp5akvuawtxc" path="res://Items/PossessableMaterial.tres" id="1_m0pib"]
+[ext_resource type="Script" path="res://Items/possessable_ressource.gd" id="1_towkl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rrvlt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2m2es"]
+
+[node name="PossessableRessource" type="Node3D"]
+script = ExtResource("1_towkl")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_rrvlt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_2m2es")
+surface_material_override/0 = ExtResource("1_m0pib")

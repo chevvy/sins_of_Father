@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://ckvcmsbtmrmll" path="res://Player/Input/PlayerInputMaps/PlayerInputRessource2.tres" id="4_udx06"]
 [ext_resource type="Resource" uid="uid://dludqtg5bso14" path="res://Player/Input/PlayerInputMaps/PlayerInputRessource3.tres" id="5_khxoc"]
 [ext_resource type="Resource" uid="uid://diw41loh47sxk" path="res://Player/Input/PlayerInputMaps/PlayerInputRessourceKb.tres" id="6_e5b2d"]
-[ext_resource type="PackedScene" uid="uid://c7i6adu8qeqty" path="res://Player/Player.tscn" id="7_lllta"]
+[ext_resource type="PackedScene" uid="uid://14dwm26tmme" path="res://Player/Player.tscn" id="7_lllta"]
 
 [node name="PlayerInputSystems" type="Node"]
 script = ExtResource("1_sv10y")

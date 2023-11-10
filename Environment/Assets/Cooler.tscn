@@ -85,6 +85,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_477rb")
 
 [node name="Cooler" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 15
 
 [node name="Cooler_Bot" type="MeshInstance3D" parent="."]
 material_override = ExtResource("2_ahuod")

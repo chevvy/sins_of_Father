@@ -15,7 +15,6 @@ albedo_color = Color(0.270588, 0.533333, 1, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ls2vs"]
 resource_name = "material_1"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_htjk5"]
 _surfaces = [{
@@ -50,7 +49,6 @@ shadow_mesh = SubResource("ArrayMesh_htjk5")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aasw6"]
 resource_name = "material_2"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_v5rhk"]
 _surfaces = [{
@@ -85,7 +83,6 @@ shadow_mesh = SubResource("ArrayMesh_v5rhk")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oxwvl"]
 resource_name = "material_3"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_23hcr"]
 _surfaces = [{
@@ -120,7 +117,6 @@ shadow_mesh = SubResource("ArrayMesh_23hcr")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5awab"]
 resource_name = "material_4"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_aalv5"]
 _surfaces = [{
@@ -155,7 +151,6 @@ shadow_mesh = SubResource("ArrayMesh_aalv5")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxg1e"]
 resource_name = "material_5"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_xmmeo"]
 _surfaces = [{
@@ -190,7 +185,6 @@ shadow_mesh = SubResource("ArrayMesh_xmmeo")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hnp5q"]
 resource_name = "material_6"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_r27k3"]
 _surfaces = [{
@@ -225,7 +219,6 @@ shadow_mesh = SubResource("ArrayMesh_r27k3")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0hp3"]
 resource_name = "material_7"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_41v5r"]
 _surfaces = [{
@@ -260,7 +253,6 @@ shadow_mesh = SubResource("ArrayMesh_41v5r")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v774k"]
 resource_name = "material_8"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_87npk"]
 _surfaces = [{
