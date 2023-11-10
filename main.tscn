@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://fam86exg3dd6" path="res://Environment/Assets/Table.tscn" id="13_8nx56"]
 [ext_resource type="PackedScene" uid="uid://bwcige5i3nkxw" path="res://Environment/Assets/Panel_02.tscn" id="13_8v324"]
 [ext_resource type="PackedScene" uid="uid://cidynks8xeyjy" path="res://Items/possessable.tscn" id="15_sanh1"]
-[ext_resource type="PackedScene" uid="uid://dtqs3a5ooweng" path="res://CharacterWithPath.tscn" id="15_xav1k"]
+[ext_resource type="PackedScene" uid="uid://3fhmyln3sout" path="res://Character/CharacterWithController.tscn" id="15_t51r0"]
 
 [node name="Main" type="Node"]
 
@@ -204,18 +204,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18843, 0.147765, 23.7669)
 [node name="PossessablesTest" type="Node" parent="."]
 
 [node name="Possessable" parent="PossessablesTest" instance=ExtResource("15_sanh1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8298, 2.48577, 3.0795)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8298, 2.48577, -2.67715)
 
-[node name="CharacterPaths" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.546876, 0)
+[node name="Runners" type="Node3D" parent="."]
 
-[node name="Char1Path" parent="CharacterPaths" instance=ExtResource("15_xav1k")]
+[node name="CharacterRigidWithGoal" type="Node3D" parent="Runners"]
 
-[node name="Char1Path2" parent="CharacterPaths" instance=ExtResource("15_xav1k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.895657)
+[node name="goal" type="Marker3D" parent="Runners/CharacterRigidWithGoal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6123, 0, -3.12761)
 
-[node name="Char1Path3" parent="CharacterPaths" instance=ExtResource("15_xav1k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.16711)
-
-[node name="Char1Path4" parent="CharacterPaths" instance=ExtResource("15_xav1k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.893)
+[node name="CharacterBody3D" parent="Runners/CharacterRigidWithGoal" node_paths=PackedStringArray("goal_marker") instance=ExtResource("15_t51r0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1295, 0, -2.35307)
+goal_marker = NodePath("../goal")
