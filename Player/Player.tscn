@@ -4,13 +4,14 @@
 [ext_resource type="Script" path="res://Player/possessable_checker.gd" id="2_yt6vn"]
 [ext_resource type="Script" path="res://Player/possessable_manager.gd" id="3_axivo"]
 [ext_resource type="Script" path="res://Player/player_collision_mesh.gd" id="4_pye3q"]
+[ext_resource type="PackedScene" uid="uid://yuxpn5dl0q2b" path="res://Ghost/Ghost.tscn" id="5_ud0tq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ebow"]
 size = Vector3(3, 3, 3)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eesep"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_f5gi3"]
+radius = 0.708598
+height = 2.64337
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("POSSESSABLE_CHECKER", "POSSESSABLE_MANAGER")]
 script = ExtResource("1_dncad")
@@ -19,7 +20,7 @@ POSSESSABLE_MANAGER = NodePath("PossessableManager")
 
 [node name="PossessableChecker" type="Area3D" parent="."]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("2_yt6vn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PossessableChecker"]
@@ -30,13 +31,15 @@ script = ExtResource("3_axivo")
 playerMesh = NodePath("../PlayerCollisionAndMesh")
 playerRootNode = NodePath("..")
 
-[node name="PlayerCollisionAndMesh" type="CollisionShape3D" parent="." node_paths=PackedStringArray("playerMesh")]
+[node name="PlayerCollisionAndMesh" type="CollisionShape3D" parent="." node_paths=PackedStringArray("ghost", "possessable_mesh")]
 shape = SubResource("CapsuleShape3D_eesep")
 script = ExtResource("4_pye3q")
-playerMesh = NodePath("MeshInstance3D")
+ghost = NodePath("Ghost_Rig")
+possessable_mesh = NodePath("PossessableMesh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PlayerCollisionAndMesh"]
-mesh = SubResource("CapsuleMesh_f5gi3")
+[node name="Ghost_Rig" parent="PlayerCollisionAndMesh" instance=ExtResource("5_ud0tq")]
+
+[node name="PossessableMesh" type="MeshInstance3D" parent="PlayerCollisionAndMesh"]
 
 [connection signal="body_entered" from="PossessableChecker" to="PossessableChecker" method="_on_body_entered"]
 [connection signal="body_exited" from="PossessableChecker" to="PossessableChecker" method="_on_body_exited"]

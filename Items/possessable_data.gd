@@ -5,6 +5,6 @@ var mesh: MeshInstance3D
 var possessable_scene: PackedScene
 
 func _init(new_mesh: MeshInstance3D, new_scene: PackedScene):
-    mesh = new_mesh
-    possessable_scene = new_scene
+	mesh = new_mesh
+	possessable_scene = new_scene
 

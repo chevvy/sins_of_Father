@@ -6,10 +6,9 @@
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f5gi3"]
 
-[node name="PlayerCollisionAndMesh" type="CollisionShape3D" node_paths=PackedStringArray("playerMesh")]
+[node name="PlayerCollisionAndMesh" type="CollisionShape3D"]
 shape = SubResource("CapsuleShape3D_eesep")
 script = ExtResource("1_rfbla")
-playerMesh = NodePath("MeshInstance3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_f5gi3")

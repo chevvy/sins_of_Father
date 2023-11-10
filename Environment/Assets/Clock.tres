@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cu2ijpfqf4rwy"]
+
+[ext_resource type="Texture2D" uid="uid://b4mdgo128i2f8" path="res://ImportedAssets/Assets/Clock_C.png" id="1_loa2v"]
+[ext_resource type="Texture2D" uid="uid://65udryx0ucpa" path="res://ImportedAssets/Assets/Clock_ORM.png" id="2_5xnqq"]
+
+[resource]
+albedo_texture = ExtResource("1_loa2v")
+metallic = 1.0
+metallic_texture = ExtResource("2_5xnqq")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_5xnqq")
+roughness_texture_channel = 1

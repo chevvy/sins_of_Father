@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://2g1v3hlc4k5u"]
+
+[ext_resource type="Texture2D" uid="uid://bwp57onrbdck6" path="res://ImportedAssets/Assets/Cooler_C.png" id="1_otrd4"]
+[ext_resource type="Texture2D" uid="uid://ciy30o2up30ti" path="res://ImportedAssets/Assets/Cooler_ORM.png" id="2_b6qgt"]
+
+[resource]
+albedo_texture = ExtResource("1_otrd4")
+metallic_texture = ExtResource("2_b6qgt")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_b6qgt")
+roughness_texture_channel = 1

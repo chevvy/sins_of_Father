@@ -158,3 +158,8 @@ move_right_4={
 3d_physics/layer_2="possessable"
 3d_physics/layer_3="runner"
 3d_physics/layer_4="ground"
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=1
+anti_aliasing/quality/screen_space_aa=1

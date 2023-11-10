@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://hjnh0j1lw8o"]
+
+[ext_resource type="Texture2D" uid="uid://b0j0a8jrlq35f" path="res://ImportedAssets/Assets/Cone_C.png" id="1_ljhj1"]
+[ext_resource type="Texture2D" uid="uid://chvuf1l1yuul4" path="res://ImportedAssets/Assets/Cone_ORM.png" id="2_bxc6o"]
+
+[resource]
+albedo_texture = ExtResource("1_ljhj1")
+metallic = 1.0
+metallic_texture = ExtResource("2_bxc6o")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_bxc6o")
+roughness_texture_channel = 1
