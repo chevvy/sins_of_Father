@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtqs3a5ooweng"]
+
+[ext_resource type="PackedScene" uid="uid://mrjk2br6l14" path="res://Character/Character.tscn" id="1_qud60"]
+[ext_resource type="Script" path="res://PossessableDetector.gd" id="2_jxkw6"]
+
+[sub_resource type="Curve3D" id="Curve3D_2tudt"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -24.2541, 0, -2.21703, 0, 0, 0, 0, 0, 0, 24.1693, -9.53674e-07, -2.32476, 0, 0, 0, 0, 0, 0, -24.2541, 0, -2.21703),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vhcss"]
+radius = 1.953
+height = 4.39
+
+[node name="Char1Path" type="Path3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.76595)
+curve = SubResource("Curve3D_2tudt")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(0.00222468, -2.05265e-08, -0.999963, 1.80785e-05, 1, 1.96945e-08, 0.999963, -1.80791e-05, 0.00222468, -22.9991, -2.47169e-08, -2.21982)
+progress = 1.2503
+loop = false
+
+[node name="Character_Rig" parent="PathFollow3D" node_paths=PackedStringArray("path_follow") instance=ExtResource("1_qud60")]
+transform = Transform3D(0.0154784, 0, 0.999904, 0, 1, 0, -0.999904, 0, 0.0154784, 0.616201, -0.546876, 2.50549)
+path_follow = NodePath("..")
+
+[node name="PossessableDetector" type="Area3D" parent="PathFollow3D/Character_Rig"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2_jxkw6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PathFollow3D/Character_Rig/PossessableDetector"]
+transform = Transform3D(1, 9.87633e-14, -1.39253e-09, -1.47464e-13, 1, -1.94378e-12, 2.52624e-09, 6.85822e-12, 1, -0.00322533, 1.67409, -0.243272)
+shape = SubResource("CapsuleShape3D_vhcss")
+
+[connection signal="body_entered" from="PathFollow3D/Character_Rig/PossessableDetector" to="PathFollow3D/Character_Rig/PossessableDetector" method="_on_body_entered"]
+[connection signal="on_possessable_impact" from="PathFollow3D/Character_Rig/PossessableDetector" to="PathFollow3D/Character_Rig" method="on_hit_by_object"]
