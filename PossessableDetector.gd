@@ -2,7 +2,7 @@ class_name PossessableDetector extends Area3D
 
 
 signal on_possessable_impact
-@export var push_force_on_possessable = 100
+@export var push_force_on_possessable = 50
 
 func _on_body_entered(body):
 	
