@@ -8,6 +8,7 @@ var knockback_dir : Vector3 = Vector3(0, 0 ,0)
 
 @export var goal_marker: Marker3D
 @export var knockback_timer: Timer
+@export var char_visual: CharacterVisual
 
 
 func _physics_process(delta):
@@ -39,10 +40,10 @@ func apply_collision():
 			is_being_knockedback = true
 			knockback_timer.start()
 			print("start of knockback")
-			
-	
+			char_visual.hit_animation()
 
 
 func _on_knockback_timer_timeout():
 	print("end of knockback")
 	is_being_knockedback = false
+	char_visual.run_animation()

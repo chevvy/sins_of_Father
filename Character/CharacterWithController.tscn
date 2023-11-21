@@ -7,12 +7,13 @@
 radius = 1.895
 height = 3.79
 
-[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("knockback_timer")]
+[node name="CharacterController" type="CharacterBody3D" node_paths=PackedStringArray("knockback_timer", "char_visual")]
 collision_layer = 4
 collision_mask = 2
 axis_lock_linear_z = true
 script = ExtResource("1_sauk7")
 knockback_timer = NodePath("KnockbackTimer")
+char_visual = NodePath("Character")
 
 [node name="Character" parent="." instance=ExtResource("1_vbs7i")]
 
