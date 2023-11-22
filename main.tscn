@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://dstr5dso05ljk" path="res://Player/Input/PlayerInputSystems.tscn" id="3_vkeb7"]
 [ext_resource type="PackedScene" uid="uid://b2bxoaditrw1i" path="res://Environment/WorldEnvironment.tscn" id="4_2bakf"]
 [ext_resource type="PackedScene" uid="uid://r8wjvsskxegb" path="res://Environment/Assets/Clock.tscn" id="5_8oghq"]
-[ext_resource type="PackedScene" uid="uid://mrjk2br6l14" path="res://Character/Character.tscn" id="5_gfmam"]
 [ext_resource type="PackedScene" uid="uid://b4igp5ancnhj" path="res://Environment/Assets/Bench.tscn" id="7_hphln"]
 [ext_resource type="PackedScene" uid="uid://cqskj4g2vs5tp" path="res://Environment/Assets/Cone.tscn" id="8_xbdb7"]
 [ext_resource type="PackedScene" uid="uid://b5eialyw6a5im" path="res://Environment/Assets/Counter.tscn" id="9_j544m"]
@@ -15,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://fam86exg3dd6" path="res://Environment/Assets/Table.tscn" id="13_8nx56"]
 [ext_resource type="PackedScene" uid="uid://bwcige5i3nkxw" path="res://Environment/Assets/Panel_02.tscn" id="13_8v324"]
 [ext_resource type="PackedScene" uid="uid://cidynks8xeyjy" path="res://Items/possessable.tscn" id="15_sanh1"]
+[ext_resource type="PackedScene" uid="uid://3fhmyln3sout" path="res://Character/CharacterWithController.tscn" id="15_winyk"]
 
 [node name="Main" type="Node"]
 
@@ -30,9 +30,6 @@ transform = Transform3D(1, -0.000218109, 0.000118454, 0.000218127, 1, -8.32592e-
 
 [node name="Clock" parent="." instance=ExtResource("5_8oghq")]
 transform = Transform3D(0.918259, 0, 0.395979, 0, 1, 0, -0.395979, 0, 0.918259, 1.39833, 0.118567, -31.6088)
-
-[node name="Character_Rig" parent="." instance=ExtResource("5_gfmam")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7497, 0, -2.40968)
 
 [node name="Assets" type="Node3D" parent="."]
 
@@ -207,4 +204,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18843, 0.147765, 23.7669)
 [node name="PossessablesTest" type="Node" parent="."]
 
 [node name="Possessable" parent="PossessablesTest" instance=ExtResource("15_sanh1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.19117, 2.48577, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8298, 2.48577, -2.67715)
+
+[node name="Runners" type="Node3D" parent="."]
+
+[node name="CharacterRigidWithGoal" type="Node3D" parent="Runners"]
+
+[node name="goal" type="Marker3D" parent="Runners/CharacterRigidWithGoal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.6123, 0, -3.12761)
+
+[node name="CharacterBody3D" parent="Runners/CharacterRigidWithGoal" node_paths=PackedStringArray("goal_marker") instance=ExtResource("15_winyk")]
+transform = Transform3D(-4.37114e-08, 3.48787e-16, 1, 3.48787e-16, 1, -3.48787e-16, -1, 3.48787e-16, -4.37114e-08, -27.1295, 0, -2.35307)
+goal_marker = NodePath("../goal")

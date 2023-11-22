@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://buf2dsf7vu1b5"]
+
+[ext_resource type="Script" path="res://Character/CharacterController.gd" id="1_2i6ks"]
+[ext_resource type="PackedScene" uid="uid://mrjk2br6l14" path="res://Character/Character.tscn" id="2_puvb1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kbbnq"]
+radius = 1.649
+height = 3.298
+
+[node name="CharacterRigidBodyController" type="RigidBody3D"]
+collision_layer = 4
+collision_mask = 10
+mass = 15.13
+script = ExtResource("1_2i6ks")
+
+[node name="Character" parent="." instance=ExtResource("2_puvb1")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.70523, 0)
+shape = SubResource("CapsuleShape3D_kbbnq")

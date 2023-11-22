@@ -22,11 +22,11 @@ script = ExtResource("2_5m6b8")
 bones/1/position = Vector3(-2.00048e-14, 0.507601, 1.11629e-15)
 
 [node name="Physical Bone Spine_01" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="1"]
-transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79843e-08, 1, 1.46028e-08, 3.8147e-06, 0.253802, 1.01637e-09)
+transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79844e-08, 1, 1.46027e-08, 3.8147e-06, 0.253802, 1.01637e-09)
 collision_layer = 0
 collision_mask = 0
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5216e-06, -4.72227e-09, 0.253802)
-body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.13558e-08, 1, -2.76772e-09, 3.79525e-06, 0.253802, 5.42476e-09)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5216e-06, -4.72226e-09, 0.253802)
+body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.13559e-08, 1, -2.76775e-09, 3.79525e-06, 0.253802, 5.42476e-09)
 can_sleep = false
 bone_name = "Spine_01"
 
@@ -35,13 +35,13 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_slhu2")
 
 [node name="Physical Bone Spine_02" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="2"]
-transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79871e-08, 1, 1.4604e-08, -3.10255e-06, 0.761401, -1.3642e-08)
+transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79872e-08, 1, 1.46039e-08, -3.10256e-06, 0.761401, -1.3642e-08)
 collision_layer = 0
 collision_mask = 0
 axis_lock_angular_y = true
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43454e-06, 1.11793e-09, 0.2538)
-body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.13586e-08, 1, -2.76652e-09, -3.1609e-06, 0.2538, -4.15824e-10)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43455e-06, 1.11794e-09, 0.2538)
+body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.13587e-08, 1, -2.76655e-09, -3.1609e-06, 0.2538, -4.15824e-10)
 bone_name = "Spine_02"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -54,13 +54,13 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_puypr")
 
 [node name="Physical Bone Spine_03" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="3"]
-transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79871e-08, 1, 1.46033e-08, 7.72663e-06, 1.26899, -2.08284e-08)
+transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79872e-08, 1, 1.46033e-08, 7.72663e-06, 1.26899, -2.08284e-08)
 collision_layer = 0
 collision_mask = 0
 axis_lock_angular_y = true
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35575e-06, -5.11706e-10, 0.253788)
-body_offset = Transform3D(1, 3.16192e-12, -1.07821e-06, -1.07821e-06, -3.55271e-13, -1, 1.13586e-08, 1, -2.76712e-09, 7.62939e-06, 0.253788, 1.21405e-09)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35575e-06, -5.11698e-10, 0.253788)
+body_offset = Transform3D(1, 3.16192e-12, -1.07821e-06, -1.07821e-06, -3.55271e-13, -1, 1.13587e-08, 1, -2.76715e-09, 7.62939e-06, 0.253788, 1.21405e-09)
 bone_name = "Spine_03"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0

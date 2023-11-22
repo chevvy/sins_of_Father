@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://3fhmyln3sout"]
+
+[ext_resource type="Script" path="res://Character/CharacterWithController.gd" id="1_sauk7"]
+[ext_resource type="PackedScene" uid="uid://mrjk2br6l14" path="res://Character/Character.tscn" id="1_vbs7i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gt3j5"]
+radius = 1.895
+height = 3.79
+
+[node name="CharacterController" type="CharacterBody3D" node_paths=PackedStringArray("knockback_timer", "char_visual")]
+collision_layer = 4
+collision_mask = 2
+axis_lock_linear_z = true
+script = ExtResource("1_sauk7")
+knockback_timer = NodePath("KnockbackTimer")
+char_visual = NodePath("Character")
+
+[node name="Character" parent="." instance=ExtResource("1_vbs7i")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111796, 1.27804, -0.204642)
+shape = SubResource("CapsuleShape3D_gt3j5")
+
+[node name="KnockbackTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]

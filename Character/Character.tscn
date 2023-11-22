@@ -1,5 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrjk2br6l14"]
+[gd_scene load_steps=3 format=3 uid="uid://mrjk2br6l14"]
 
 [ext_resource type="PackedScene" uid="uid://bfiutb6kaw6jb" path="res://ImportedAssets/Character/Character_Rig.glb" id="1_gril0"]
+[ext_resource type="Script" path="res://Character/CharacterVisual.gd" id="2_6500f"]
 
-[node name="Character_Rig" instance=ExtResource("1_gril0")]
+[node name="Character" instance=ExtResource("1_gril0")]
+script = ExtResource("2_6500f")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/16/rotation = Quaternion(0.0247108, 0.00511074, -0.12812, 0.991438)
+bones/20/rotation = Quaternion(0.0247108, -0.00511078, 0.12812, 0.991438)
