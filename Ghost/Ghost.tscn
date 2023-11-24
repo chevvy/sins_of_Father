@@ -22,26 +22,27 @@ script = ExtResource("2_5m6b8")
 bones/1/position = Vector3(-2.00048e-14, 0.507601, 1.11629e-15)
 
 [node name="Physical Bone Spine_01" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="1"]
-transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79844e-08, 1, 1.46027e-08, 3.8147e-06, 0.253802, 1.01637e-09)
+transform = Transform3D(1.00001, -7.66263e-08, -1.19209e-06, -1.19209e-06, 1.73701e-08, -1.00001, 8.80305e-08, 1, 1.45912e-08, 1.85949e-05, 0.253805, 1.02016e-09)
 collision_layer = 0
 collision_mask = 0
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5216e-06, -4.72226e-09, 0.253802)
-body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.13559e-08, 1, -2.76775e-09, 3.79525e-06, 0.253802, 5.42476e-09)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82923e-05, -4.72187e-09, 0.253804)
+body_offset = Transform3D(1.00001, 2.20979e-12, -1.11546e-06, -1.11546e-06, -4.13891e-13, -1.00001, 1.14016e-08, 1, -2.77932e-09, 1.85755e-05, 0.253805, 5.42748e-09)
 can_sleep = false
 bone_name = "Spine_01"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ghost/Skeleton3D/Physical Bone Spine_01" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_slhu2")
+disabled = true
 
 [node name="Physical Bone Spine_02" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="2"]
-transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79872e-08, 1, 1.46039e-08, -3.10256e-06, 0.761401, -1.3642e-08)
+transform = Transform3D(1.00001, -7.66263e-08, -1.19209e-06, -1.19209e-06, 1.73701e-08, -1.00001, 8.80333e-08, 1, 1.45924e-08, -4.05312e-06, 0.761405, -1.36342e-08)
 collision_layer = 0
 collision_mask = 0
 axis_lock_angular_y = true
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43455e-06, 1.11794e-09, 0.2538)
-body_offset = Transform3D(1, 3.19744e-12, -1.07821e-06, -1.07821e-06, -3.57048e-13, -1, 1.13587e-08, 1, -2.76655e-09, -3.1609e-06, 0.2538, -4.15824e-10)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39454e-06, 1.11292e-09, 0.253802)
+body_offset = Transform3D(1.00001, 2.20979e-12, -1.11546e-06, -1.11546e-06, -4.13891e-13, -1.00001, 1.14044e-08, 1, -2.77812e-09, -4.11146e-06, 0.253803, -4.0788e-10)
 bone_name = "Spine_02"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -52,15 +53,16 @@ joint_constraints/relaxation = 1.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ghost/Skeleton3D/Physical Bone Spine_02" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_puypr")
+disabled = true
 
 [node name="Physical Bone Spine_03" type="PhysicalBone3D" parent="Ghost/Skeleton3D" index="3"]
-transform = Transform3D(1, -7.66253e-08, -1.15484e-06, -1.15484e-06, 1.73702e-08, -1, 8.79872e-08, 1, 1.46033e-08, 7.72663e-06, 1.26899, -2.08284e-08)
+transform = Transform3D(1.00001, -7.66264e-08, -1.19209e-06, -1.19209e-06, 1.73701e-08, -1.00001, 8.80333e-08, 1, 1.45928e-08, 1.3589e-05, 1.269, -2.08283e-08)
 collision_layer = 0
 collision_mask = 0
 axis_lock_angular_y = true
 joint_type = 2
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.35575e-06, -5.11698e-10, 0.253788)
-body_offset = Transform3D(1, 3.16192e-12, -1.07821e-06, -1.07821e-06, -3.55271e-13, -1, 1.13587e-08, 1, -2.76715e-09, 7.62939e-06, 0.253788, 1.21405e-09)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32086e-05, -5.08647e-10, 0.253792)
+body_offset = Transform3D(1.00001, 2.10321e-12, -1.11546e-06, -1.11546e-06, -4.1922e-13, -1.00001, 1.14043e-08, 1, -2.77777e-09, 1.34918e-05, 0.253793, 1.21377e-09)
 bone_name = "Spine_03"
 joint_constraints/swing_span = 45.0
 joint_constraints/twist_span = 180.0
@@ -71,3 +73,4 @@ joint_constraints/relaxation = 1.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ghost/Skeleton3D/Physical Bone Spine_03" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_50ksa")
+disabled = true
