@@ -61,6 +61,7 @@ func _physics_process(delta):
 	var move_forward = current_input_map.move_forward
 	var move_backward = current_input_map.move_backward
 	var input_dir = Input.get_vector(move_left, move_right, move_forward, move_backward)
+	
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
@@ -69,8 +70,13 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
+	## rotate toward angle that is the difference between camera and player angle?
 	move_and_slide()
 	apply_collision()
+
+func get_camera_forward() -> float:
+	var cam := CameraManager.get_camera()
+	return cam.rotation.x
 
 
 func apply_collision():

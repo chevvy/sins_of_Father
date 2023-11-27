@@ -13,6 +13,7 @@ material = ExtResource("1_iewl5")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH")]
 collision_layer = 2
+collision_mask = 9
 mass = 10.0
 script = ExtResource("1_lyix4")
 POSSESSABLE_SCENE = ExtResource("2_1crvr")
