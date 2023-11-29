@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://djb3gwcpmht3n"]
+
+[ext_resource type="Texture2D" uid="uid://bejm5pp5grw43" path="res://VFX/smoke_01.png" id="1_kt5a4"]
+
+[sub_resource type="Curve" id="Curve_fdue1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_30hfe"]
+curve = SubResource("Curve_fdue1")
+
+[sub_resource type="Curve" id="Curve_2b8m3"]
+max_value = 100.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 18.9474), 25.3589, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_28xey"]
+curve = SubResource("Curve_2b8m3")
+
+[sub_resource type="Curve" id="Curve_vsjfe"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.578616, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_62iu8"]
+curve = SubResource("Curve_vsjfe")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_13gom"]
+lifetime_randomness = 0.3
+direction = Vector3(0, 0.5, -1)
+spread = 20.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 4.0
+initial_velocity_max = 6.0
+linear_accel_min = 4.0
+linear_accel_max = 4.0
+damping_min = 1.5
+damping_max = 3.0
+damping_curve = SubResource("CurveTexture_28xey")
+angle_min = 180.0
+angle_max = 360.0
+angle_curve = SubResource("CurveTexture_30hfe")
+scale_min = 0.6
+scale_curve = SubResource("CurveTexture_62iu8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hehke"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("1_kt5a4")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_nqy1w"]
+material = SubResource("StandardMaterial3D_hehke")
+
+[node name="VFX_Smoke" type="GPUParticles3D"]
+cast_shadow = 0
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_13gom")
+draw_pass_1 = SubResource("QuadMesh_nqy1w")

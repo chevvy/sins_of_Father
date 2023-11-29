@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://mrjk2br6l14"]
+[gd_scene load_steps=12 format=3 uid="uid://mrjk2br6l14"]
 
 [ext_resource type="PackedScene" uid="uid://bfiutb6kaw6jb" path="res://ImportedAssets/Character/Character_Rig.glb" id="1_gril0"]
 [ext_resource type="Script" path="res://Character/CharacterVisual.gd" id="2_6500f"]
+[ext_resource type="PackedScene" uid="uid://djb3gwcpmht3n" path="res://VFX/vfx_smoke.tscn" id="3_ytxn0"]
 
 [sub_resource type="Animation" id="Animation_sodlc"]
 resource_name = "Character_Default"
@@ -139,6 +140,18 @@ tracks/18/path = NodePath("Armature/Skeleton3D:Lower_Leg_R")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 3.74859e-09, 1.06111e-08, -0.0840463, 0.996462)
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("VFX_Smoke:emitting")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rludq"]
 blend_mode = 3
@@ -371,11 +384,24 @@ tracks/26/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("VFX_Smoke:emitting")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_prq3t"]
 resource_name = "Character_Idle_loop"
 length = 0.6
 loop_mode = 1
+step = 0.0333333
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -509,11 +535,36 @@ tracks/18/path = NodePath("Armature/Skeleton3D:Lower_Leg_R")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 6.92036e-08, 1.84804e-08, -0.645475, 0.763782, 0.0333333, 1, 7.22677e-08, -1.20926e-08, -0.635652, 0.771976, 0.0666667, 1, 7.10466e-08, -6.23075e-10, -0.611696, 0.791093, 0.1, 1, 7.033e-08, 1.28682e-09, -0.574382, 0.818588, 0.133333, 1, 6.4261e-08, -1.05022e-10, -0.52412, 0.851644, 0.166667, 1, 5.12355e-08, 1.1985e-08, -0.461223, 0.887284, 0.2, 1, 4.87877e-08, 1.74728e-08, -0.386112, 0.922452, 0.233333, 1, 3.1718e-08, 2.77836e-09, -0.298411, 0.954438, 0.266667, 1, 1.48339e-08, 1.88099e-08, -0.204437, 0.97888, 0.3, 1, 7.82687e-09, 2.02328e-08, -0.127579, 0.991828, 0.333333, 1, 6.78008e-09, 1.38831e-08, -0.117121, 0.993118, 0.366667, 1, 9.98002e-09, 1.59701e-08, -0.192725, 0.981253, 0.4, 1, 3.37934e-08, 9.38782e-09, -0.290507, 0.956873, 0.433333, 1, 5.51263e-08, 1.30551e-08, -0.377913, 0.925841, 0.466667, 1, 6.71277e-08, 2.16959e-08, -0.453563, 0.891224, 0.5, 1, 7.81741e-08, 1.36403e-08, -0.517001, 0.855985, 0.533333, 1, 7.40436e-08, 3.9716e-09, -0.568194, 0.822894, 0.566667, 1, 5.45198e-08, 9.50004e-09, -0.607204, 0.794546, 0.6, 1, 6.99182e-08, 1.37978e-08, -0.633873, 0.773437)
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("VFX_Smoke:emitting")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Armature:scale")
+tracks/20/interp = 2
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.3, 0.433333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.52, 0.465, 0.52), Vector3(0.52, 0.465, 0.52), Vector3(0.482, 0.5, 0.435), Vector3(0.482, 0.5, 0.435), Vector3(0.52, 0.465, 0.52)]
+}
 
 [sub_resource type="Animation" id="Animation_kf7u4"]
 resource_name = "Character_Run_loop"
 length = 0.56
 loop_mode = 1
+step = 0.0333333
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -647,6 +698,30 @@ tracks/18/path = NodePath("Armature/Skeleton3D:Lower_Leg_R")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, -4.85613e-09, 1.29424e-08, -0.00227582, 0.999997, 0.0333333, 1, 7.74263e-08, 1.48797e-08, -0.575018, 0.818141, 0.0666667, 1, 1.03155e-08, 1.14822e-08, -0.720478, 0.693478, 0.1, 1, -3.74076e-09, 2.15767e-09, -0.708151, 0.706061, 0.133333, 1, 2.03129e-08, -4.10558e-09, -0.636271, 0.771466, 0.166667, 1, 1.93157e-08, 2.85863e-09, -0.561596, 0.827412, 0.2, 1, 3.95735e-08, 2.2755e-08, -0.545244, 0.838278, 0.233333, 1, 5.94006e-08, 2.1323e-08, -0.790651, 0.612268, 0.266667, 1, 5.57793e-09, 3.86737e-09, -0.853503, 0.521088, 0.3, 1, 2.6885e-08, 8.12531e-09, -0.70637, 0.707843, 0.333333, 1, 5.47774e-08, 1.72706e-08, -0.343093, 0.939302, 0.366667, 1, 8.87041e-09, 8.97142e-09, -0.00229371, 0.999997, 0.4, 1, 2.27027e-09, 4.83919e-09, -0.00227725, 0.999997, 0.433333, 1, 6.06617e-09, 5.54294e-09, -0.458475, 0.888708, 0.466667, 1, 1.90932e-08, 7.31802e-09, -0.64426, 0.764807, 0.5, 1, 3.17314e-08, 4.3787e-10, -0.669422, 0.742883, 0.533333, 1, 3.09627e-08, -2.20891e-09, -0.570293, 0.821442, 0.56, 1, 1.5627e-08, 7.96564e-09, -0.404061, 0.914732)
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("VFX_Smoke:emitting")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.166667, 0.2, 0.466667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Armature:scale")
+tracks/20/interp = 2
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.166667, 0.266667, 0.333333, 0.433333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.436, 0.5, 0.435), Vector3(0.436, 0.435309, 0.543386), Vector3(0.52, 0.435, 0.435), Vector3(0.436, 0.5, 0.435), Vector3(0.436, 0.435309, 0.543386), Vector3(0.52, 0.435, 0.435), Vector3(0.436, 0.5, 0.435)]
+}
 
 [sub_resource type="Animation" id="Animation_on0ht"]
 resource_name = "Ghost_Default"
@@ -784,6 +859,30 @@ tracks/18/path = NodePath("Armature/Skeleton3D:Lower_Leg_R")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 3.74859e-09, 1.06111e-08, -0.0840463, 0.996462)
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Armature:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.435, 0.435, 0.435)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("VFX_Smoke:emitting")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_41pda"]
 length = 0.001
@@ -865,6 +964,30 @@ tracks/6/keys = {
 "points": PackedFloat32Array(0.44284, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VFX_Smoke:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Armature:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.435, 0.435, 0.435)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oupww"]
 _data = {
@@ -908,3 +1031,6 @@ bones/29/rotation = Quaternion(2.30734e-08, 7.32548e-09, -0.178584, 0.983925)
 libraries = {
 "": SubResource("AnimationLibrary_oupww")
 }
+
+[node name="VFX_Smoke" parent="." index="2" instance=ExtResource("3_ytxn0")]
+emitting = false
