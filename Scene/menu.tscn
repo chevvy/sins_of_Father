@@ -1,0 +1,517 @@
+[gd_scene load_steps=18 format=3 uid="uid://4fsyu83bn2f0"]
+
+[ext_resource type="Texture2D" uid="uid://djasc2ga7quo5" path="res://VFX/Checker_Alpha.png" id="1_1ytqd"]
+[ext_resource type="FontFile" uid="uid://cy5qefxjl2xa1" path="res://Font/darkforest.ttf" id="2_ioubi"]
+[ext_resource type="Texture2D" uid="uid://b68xd4ptl01in" path="res://VFX/Select_Frame.png" id="3_rll0x"]
+
+[sub_resource type="Animation" id="Animation_v3djj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Banner_01/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40, -120)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Banner_02/TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40, -120)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fader:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fader:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Play_Cont/Play/Select_Frame:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(169, -83)]
+}
+
+[sub_resource type="Animation" id="Animation_ycsof"]
+resource_name = "intro"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fader:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Banner_01/TextureRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, -80), Vector2(-40, -40)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Banner_02/TextureRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, -80), Vector2(-40, -40)]
+}
+
+[sub_resource type="Animation" id="Animation_38nfw"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Banner_01/TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, -120), Vector2(-40, -40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Banner_02/TextureRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, -120), Vector2(-40, -40)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fader:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fader:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Play_Cont/Play/Select_Frame:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.466667, 0.666667, 1, 1.2, 1.46667, 1.66667, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(169, -83), Vector2(169, -83), Vector2(169, -79), Vector2(169, -79), Vector2(169, -83), Vector2(169, -83), Vector2(169, -79), Vector2(169, -79), Vector2(169, -83), Vector2(169, -83)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jgedr"]
+_data = {
+"RESET": SubResource("Animation_v3djj"),
+"idle": SubResource("Animation_38nfw"),
+"intro": SubResource("Animation_ycsof")
+}
+
+[sub_resource type="Gradient" id="Gradient_xcpp5"]
+colors = PackedColorArray(0.162447, 0.447452, 1, 1, 0.442046, 0.728305, 0.999999, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mu2cx"]
+gradient = SubResource("Gradient_xcpp5")
+width = 1
+height = 512
+fill_to = Vector2(0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1e3uf"]
+line_spacing = 4.0
+font = ExtResource("2_ioubi")
+font_size = 100
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.196078)
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yqvcs"]
+font = ExtResource("2_ioubi")
+font_size = 50
+shadow_color = Color(0, 0, 0, 0.196078)
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k3hc8"]
+font = ExtResource("2_ioubi")
+font_size = 120
+shadow_color = Color(0, 0, 0, 0.196078)
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_drwp6"]
+line_spacing = 4.0
+font = ExtResource("2_ioubi")
+font_size = 60
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.196078)
+shadow_offset = Vector2(1, 10)
+
+[sub_resource type="Gradient" id="Gradient_q71kf"]
+interpolation_mode = 1
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2ggl"]
+gradient = SubResource("Gradient_q71kf")
+width = 12
+
+[sub_resource type="Gradient" id="Gradient_mvfs5"]
+interpolation_mode = 1
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lks80"]
+gradient = SubResource("Gradient_mvfs5")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "intro"
+libraries = {
+"": SubResource("AnimationLibrary_jgedr")
+}
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_mu2cx")
+
+[node name="Title_Cont" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -271.0
+offset_right = 282.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(282, 140)
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Title_Cont"]
+layout_mode = 2
+
+[node name="Sons" type="Label" parent="Title_Cont/CenterContainer"]
+layout_mode = 2
+text = "SONS"
+label_settings = SubResource("LabelSettings_1e3uf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="Title_Cont"]
+layout_mode = 2
+
+[node name="Of" type="Label" parent="Title_Cont/CenterContainer2"]
+layout_mode = 2
+text = "OF"
+label_settings = SubResource("LabelSettings_yqvcs")
+horizontal_alignment = 1
+
+[node name="CenterContainer3" type="CenterContainer" parent="Title_Cont"]
+layout_mode = 2
+
+[node name="TheFather" type="Label" parent="Title_Cont/CenterContainer3"]
+layout_mode = 2
+text = "THE FATHER"
+label_settings = SubResource("LabelSettings_k3hc8")
+horizontal_alignment = 1
+
+[node name="Play_Cont" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -282.0
+offset_top = -289.0
+offset_right = 282.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Play" type="Label" parent="Play_Cont"]
+layout_mode = 2
+text = "PLAY"
+label_settings = SubResource("LabelSettings_drwp6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select_Frame_Shadow" type="TextureRect" parent="Play_Cont/Play"]
+self_modulate = Color(0, 0, 0, 0.196078)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -107.0
+offset_right = 113.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_rll0x")
+expand_mode = 1
+
+[node name="Select_Frame" type="TextureRect" parent="Play_Cont/Play"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -115.0
+offset_right = 113.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_rll0x")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 850
+alignment = 1
+
+[node name="Banner_01" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Line_01" type="TextureRect" parent="HBoxContainer/Banner_01"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_right = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_w2ggl")
+
+[node name="Line_02" type="TextureRect" parent="HBoxContainer/Banner_01"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_right = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_w2ggl")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Banner_01"]
+self_modulate = Color(0, 0, 0, 0.196078)
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -480.0
+offset_right = 40.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ytqd")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="TextureRect_Top" type="TextureRect" parent="HBoxContainer/Banner_01/TextureRect"]
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -450.0
+offset_right = 40.0
+offset_bottom = 430.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ytqd")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="Banner_02" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Line_01" type="TextureRect" parent="HBoxContainer/Banner_02"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_right = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_w2ggl")
+
+[node name="Line_02" type="TextureRect" parent="HBoxContainer/Banner_02"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_right = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_w2ggl")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Banner_02"]
+self_modulate = Color(0, 0, 0, 0.196078)
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -480.0
+offset_right = 40.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ytqd")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="TextureRect_Top" type="TextureRect" parent="HBoxContainer/Banner_02/TextureRect"]
+texture_filter = 1
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -450.0
+offset_right = 40.0
+offset_bottom = 430.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1ytqd")
+expand_mode = 4
+stretch_mode = 1
+
+[node name="Fader" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_lks80")
