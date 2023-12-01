@@ -26,19 +26,19 @@ curve = SubResource("Curve_vsjfe")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_13gom"]
 lifetime_randomness = 0.3
+angle_min = 180.0
+angle_max = 360.0
+angle_curve = SubResource("CurveTexture_30hfe")
 direction = Vector3(0, 0.5, -1)
 spread = 20.0
-gravity = Vector3(0, 0, 0)
 initial_velocity_min = 4.0
 initial_velocity_max = 6.0
+gravity = Vector3(0, 0, 0)
 linear_accel_min = 4.0
 linear_accel_max = 4.0
 damping_min = 1.5
 damping_max = 3.0
 damping_curve = SubResource("CurveTexture_28xey")
-angle_min = 180.0
-angle_max = 360.0
-angle_curve = SubResource("CurveTexture_30hfe")
 scale_min = 0.6
 scale_curve = SubResource("CurveTexture_62iu8")
 
