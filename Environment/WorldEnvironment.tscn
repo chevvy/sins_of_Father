@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2bxoaditrw1i"]
+[gd_scene load_steps=7 format=3 uid="uid://b2bxoaditrw1i"]
 
+[ext_resource type="Script" path="res://Environment/GameCamera.gd" id="1_qcb4v"]
 [ext_resource type="Shader" path="res://Environment/WorldEnvironment.gdshader" id="1_tf0j7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_67dd6"]
@@ -56,6 +57,7 @@ projection = 1
 size = 34.0
 near = 0.1
 far = 1000.0
+script = ExtResource("1_qcb4v")
 
 [node name="Control" type="Control" parent="CameraPivot/Camera3D"]
 visible = false
