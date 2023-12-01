@@ -19,6 +19,7 @@ POSSESSABLE_CHECKER = NodePath("PossessableChecker")
 POSSESSABLE_MANAGER = NodePath("PossessableManager")
 
 [node name="PossessableChecker" type="Area3D" parent="."]
+disable_mode = 1
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_yt6vn")
