@@ -61,7 +61,9 @@ func _physics_process(delta):
 	var move_forward = current_input_map.move_forward
 	var move_backward = current_input_map.move_backward
 	var input_dir = Input.get_vector(move_left, move_right, move_forward, move_backward)
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var direction: Vector3 = (CameraManager.get_basis() * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	
+
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -70,11 +72,10 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-	apply_collision()
+	# apply_collision()
 
-
+## Apply collision to collided rigidbody. Must be called after move_and_slide
 func apply_collision():
-	# after calling move_and_slide()
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody3D:

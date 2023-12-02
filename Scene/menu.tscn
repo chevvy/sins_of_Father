@@ -67,58 +67,6 @@ tracks/4/keys = {
 "values": [Vector2(169, -83)]
 }
 
-[sub_resource type="Animation" id="Animation_ycsof"]
-resource_name = "intro"
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Fader:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Fader:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("HBoxContainer/Banner_01/TextureRect:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-40, -80), Vector2(-40, -40)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("HBoxContainer/Banner_02/TextureRect:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-40, -80), Vector2(-40, -40)]
-}
-
 [sub_resource type="Animation" id="Animation_38nfw"]
 resource_name = "idle"
 length = 2.0
@@ -183,6 +131,58 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(169, -83), Vector2(169, -83), Vector2(169, -79), Vector2(169, -79), Vector2(169, -83), Vector2(169, -83), Vector2(169, -79), Vector2(169, -79), Vector2(169, -83), Vector2(169, -83)]
+}
+
+[sub_resource type="Animation" id="Animation_ycsof"]
+resource_name = "intro"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fader:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fader:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Banner_01/TextureRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, -80), Vector2(-40, -40)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Banner_02/TextureRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, -80), Vector2(-40, -40)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jgedr"]
@@ -252,10 +252,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "intro"
 libraries = {
 "": SubResource("AnimationLibrary_jgedr")
 }
+autoplay = "intro"
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 1
@@ -355,10 +355,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -115.0
-offset_right = 113.0
-offset_bottom = 113.0
+offset_left = 169.0
+offset_top = -83.0
+offset_right = 395.0
+offset_bottom = 145.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_rll0x")
@@ -412,9 +412,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -40.0
-offset_top = -480.0
+offset_top = -120.0
 offset_right = 40.0
-offset_bottom = 400.0
+offset_bottom = 760.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1ytqd")
@@ -478,9 +478,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -40.0
-offset_top = -480.0
+offset_top = -120.0
 offset_right = 40.0
-offset_bottom = 400.0
+offset_bottom = 760.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1ytqd")
