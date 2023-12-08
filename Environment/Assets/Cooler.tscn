@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhdr1qsskqpmn"]
+[gd_scene load_steps=11 format=3 uid="uid://bhdr1qsskqpmn"]
 
+[ext_resource type="Script" path="res://Items/possessable.gd" id="1_auywe"]
 [ext_resource type="Material" uid="uid://2g1v3hlc4k5u" path="res://Environment/Assets/Cooler.tres" id="2_ahuod"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_ykfxn"]
 
@@ -88,9 +89,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_477rb")
 
-[node name="Cooler" type="RigidBody3D"]
+[node name="Cooler" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
 collision_layer = 2
 collision_mask = 15
+script = ExtResource("1_auywe")
+POSSESSABLE_MESH = NodePath("Cooler_Bot")
+POSSESSABLE_NAME = 4
 
 [node name="Cooler_Bot" type="MeshInstance3D" parent="."]
 material_override = ExtResource("2_ahuod")

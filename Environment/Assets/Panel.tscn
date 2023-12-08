@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://mico01s75ed4"]
+[gd_scene load_steps=11 format=3 uid="uid://mico01s75ed4"]
 
+[ext_resource type="Script" path="res://Items/possessable.gd" id="1_fsco1"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_7ke2o"]
 [ext_resource type="Material" uid="uid://degkq5hiffp7k" path="res://Environment/Assets/Panel.tres" id="2_puqnj"]
 
@@ -84,9 +85,12 @@ shadow_mesh = SubResource("ArrayMesh_ls5xk")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lywwr"]
 points = PackedVector3Array(2.03175, 2.06349, 0.23799, -1.96964, 0.000681425, -0.999722, -2.03175, 0.0956046, -1.03175, -2.03175, 0.0320318, 1.06349, 1.96964, 0.000681425, -0.999722, -2.03175, 1.99971, -0.269618, 2.03175, 0.0320318, 1.06349, 2.03175, 1.99971, -0.269618, -2.03175, 2.06349, 0.23799, 2.03175, 0.285913, -0.967962, -2.03175, 1.61869, 0.428522, -2.03175, 0.920821, -0.714056, 2.03175, 1.61869, 0.428522, 2.03175, 0.0956046, -1.03175, 2.03175, 0.920821, -0.714056, -2.03175, 0.285913, -0.967962)
 
-[node name="Panel" type="RigidBody3D"]
+[node name="Panel" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
 collision_layer = 2
 collision_mask = 15
+script = ExtResource("1_fsco1")
+POSSESSABLE_MESH = NodePath("Panel_002")
+POSSESSABLE_NAME = 6
 
 [node name="Panel_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)

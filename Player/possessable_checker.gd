@@ -7,7 +7,7 @@ func try_possess() -> PossessableData:
 	if latest_possessable == null:
 		return null
 	
-	var data: PossessableData = latest_possessable.get_possessable_scene()
+	var data: PossessableData = latest_possessable.get_possessable_data()
 	latest_possessable.possess()
 	latest_possessable = null
 	return data

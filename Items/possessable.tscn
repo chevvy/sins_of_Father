@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cidynks8xeyjy"]
+[gd_scene load_steps=5 format=3 uid="uid://cidynks8xeyjy"]
 
 [ext_resource type="Material" uid="uid://dhp5akvuawtxc" path="res://Items/PossessableMaterial.tres" id="1_iewl5"]
 [ext_resource type="Script" path="res://Items/possessable.gd" id="1_lyix4"]
-[ext_resource type="PackedScene" uid="uid://b5fem3n7mbv8l" path="res://Items/PossessableRessource.tscn" id="2_1crvr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i11yl"]
 
@@ -15,7 +14,6 @@ material = ExtResource("1_iewl5")
 collision_layer = 2
 mass = 10.0
 script = ExtResource("1_lyix4")
-POSSESSABLE_SCENE = ExtResource("2_1crvr")
 POSSESSABLE_MESH = NodePath("CollisionShape3D/MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]

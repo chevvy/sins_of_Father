@@ -40,7 +40,7 @@ func use_possessable():
 	
 	var newPos = playerRootNode.global_position
 	newPos.z += playerRootNode.basis.z.z + 1
-	_possessable_spawner.spawn_debug_box(newPos)
+	_possessable_spawner.spawn_possessable(current_possessable_data.possessable_name, newPos)
 	
 	# remove the current possesable and reset player mesh
 	current_possessable_data = null

@@ -91,10 +91,12 @@ shadow_mesh = SubResource("ArrayMesh_ltmpi")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qb8uf"]
 points = PackedVector3Array(0.376471, 1.78845, 0.142026, 0.0654079, 0.402822, -0.95047, 0.0650321, 1.78845, -0.397303, 0.311251, 1.78845, 0.255004, 0.855753, 0.402822, 0.418447, 0.960068, 0.0280102, 0.478842, 0.0652199, 0.0280102, -1.07094, -0.0655958, 0.402822, -0.95047, -0.0652199, 1.78845, -0.397303, 0.790158, 0.402822, 0.531913, -0.311439, 1.78845, 0.255004, 0.89466, 0.0280102, 0.591983, 0.927552, 0.0106789, 0.535494, 5.96046e-08, 0.0106789, -1.0711, -0.0654079, 0.0280102, -1.07094, -0.855941, 0.402822, 0.418447, -0.376659, 1.78845, 0.142026, -0.790345, 0.402822, 0.531913, -0.894848, 0.0280102, 0.591983, -0.92774, 0.0106789, 0.535494, 0.865903, 0, 0.499843, 5.96046e-08, 0, -1.00012, -0.960068, 0.0280102, 0.478842, -0.866091, 0, 0.499843)
 
-[node name="Cone" type="RigidBody3D"]
+[node name="Cone" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_ux01a")
+POSSESSABLE_MESH = NodePath("Cone_002")
+POSSESSABLE_NAME = 2
 
 [node name="Cone_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)

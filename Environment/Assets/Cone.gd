@@ -1,4 +1,4 @@
-extends RigidBody3D
+extends Possessable
 
 @export var label_text = "1"
 
