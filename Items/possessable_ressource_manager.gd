@@ -1,11 +1,36 @@
 # PossessableSpawner
 extends Node
 
-const _debug_box = preload("res://Items/possessable.tscn")
+enum PossessableName { DEBUG, BENCH }
 
-func spawn_debug_box(pos: Vector3):
-	# we instantiate the new possesable
-	var new_possessable: Node = _debug_box.instantiate()
-	# adds the new possessable at the root
-	get_tree().root.add_child(new_possessable)
-	new_possessable.position = pos
+const DebugBox = preload("res://Items/possessable.tscn")
+const Bench = preload("res://Environment/Assets/Bench.tscn")
+
+var possessable_by_name = {
+	PossessableName.BENCH: Bench,
+	PossessableName.DEBUG: DebugBox,
+}
+
+
+func spawn_possessable(name: PossessableName, pos: Vector3):
+	var poss = possessable_by_name.get(name)
+	if poss:
+		# we instantiate the new possesable
+		var new_possessable: Node = poss.instantiate()
+		# adds the new possessable at the root
+		get_tree().root.add_child(new_possessable)
+		new_possessable.position = pos
+#
+#func spawn_debug_box(pos: Vector3):
+## we instantiate the new possesable
+#var new_possessable: Node = DebugBox.instantiate()
+## adds the new possessable at the root
+#get_tree().root.add_child(new_possessable)
+#new_possessable.position = pos
+#
+#func spawn_bench(pos: Vector3):
+## we instantiate the new possesable
+#var new_possessable: Node = Bench.instantiate()
+## adds the new possessable at the root
+#get_tree().root.add_child(new_possessable)
+#new_possessable.position = pos

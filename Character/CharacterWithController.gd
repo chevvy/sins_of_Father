@@ -41,6 +41,12 @@ func apply_collision():
 			knockback_timer.start()
 			print("start of knockback")
 			char_visual.hit_animation()
+			
+			# apply impulse on possessable
+			dir.y = 1
+			# TODO apply random rotation and direction so that it feels bit more real
+			c.get_collider().apply_central_impulse(dir * PUSH_FORCE * 10)
+				
 
 
 func _on_knockback_timer_timeout():
