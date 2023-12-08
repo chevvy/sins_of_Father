@@ -3,14 +3,14 @@ extends Node
 
 enum PossessableName { DEBUG, BENCH, CONE, COUNTER, COOLER, CHAIR, PANELEUH, TABLE }
 
-const DebugBox = preload("res://Items/possessable.tscn") 
-const Bench = preload("res://Environment/Assets/Bench.tscn") 
-const Cone = preload("res://Environment/Assets/Cone.tscn") 
-const Counter = preload("res://Environment/Assets/Counter.tscn") 
-const Cooler = preload("res://Environment/Assets/Cooler.tscn") 
-const Chair = preload("res://Environment/Assets/Chair.tscn") 
-const PanelEuh = preload("res://Environment/Assets/Panel.tscn") 
-const Table = preload("res://Environment/Assets/Table.tscn") 
+const DebugBox = preload("res://Items/possessable.tscn")
+const Bench = preload("res://Environment/Assets/Bench.tscn")
+const Cone = preload("res://Environment/Assets/Cone.tscn")
+const Counter = preload("res://Environment/Assets/Counter.tscn")
+const Cooler = preload("res://Environment/Assets/Cooler.tscn")
+const Chair = preload("res://Environment/Assets/Chair.tscn")
+const PanelEuh = preload("res://Environment/Assets/Panel.tscn")
+const Table = preload("res://Environment/Assets/Table.tscn")
 
 var possessable_by_name = {
 	PossessableName.BENCH: Bench,
