@@ -14,6 +14,7 @@ radius = 0.708598
 height = 2.64337
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("POSSESSABLE_CHECKER", "POSSESSABLE_MANAGER")]
+collision_mask = 9
 script = ExtResource("1_dncad")
 POSSESSABLE_CHECKER = NodePath("PossessableChecker")
 POSSESSABLE_MANAGER = NodePath("PossessableManager")
@@ -21,7 +22,7 @@ POSSESSABLE_MANAGER = NodePath("PossessableManager")
 [node name="PossessableChecker" type="Area3D" parent="."]
 disable_mode = 1
 collision_layer = 2
-collision_mask = 2
+collision_mask = 10
 script = ExtResource("2_yt6vn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PossessableChecker"]

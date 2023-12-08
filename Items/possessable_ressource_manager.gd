@@ -12,8 +12,8 @@ var possessable_by_name = {
 }
 
 
-func spawn_possessable(name: PossessableName, pos: Vector3):
-	var poss = possessable_by_name.get(name)
+func spawn_possessable(possessable_name: PossessableName, pos: Vector3):
+	var poss = possessable_by_name.get(possessable_name)
 	if poss:
 		# we instantiate the new possesable
 		var new_possessable: Node = poss.instantiate()
