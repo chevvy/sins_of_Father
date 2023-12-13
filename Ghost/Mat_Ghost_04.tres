@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://blcdjnqnoyh0v"]
+
+[ext_resource type="Texture2D" uid="uid://d4c6fr1sga6kj" path="res://ImportedAssets/Ghost/Ghost_Rig_Ghost_C.png" id="1_nf1xw"]
+[ext_resource type="Material" uid="uid://c4d4ujfuvmhe7" path="res://Character/Material/Mat_Outline_04.tres" id="2_bx7dm"]
+
+[resource]
+next_pass = ExtResource("2_bx7dm")
+albedo_color = Color(1, 1, 0.513726, 1)
+albedo_texture = ExtResource("1_nf1xw")

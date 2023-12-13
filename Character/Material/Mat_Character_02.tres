@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dvceat427cpjf"]
+
+[ext_resource type="Texture2D" uid="uid://c5f7o0ni7qdk" path="res://Character/Material/Character_02.png" id="1_e5p7k"]
+[ext_resource type="Material" uid="uid://5vuvlovhslm" path="res://Character/Material/Mat_Outline_02.tres" id="2_hvht8"]
+
+[resource]
+resource_name = "Character_Mat"
+next_pass = ExtResource("2_hvht8")
+cull_mode = 2
+albedo_texture = ExtResource("1_e5p7k")
+roughness = 0.5
+emission_enabled = true
+emission_texture = ExtResource("1_e5p7k")
