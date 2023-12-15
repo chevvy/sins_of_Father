@@ -13,11 +13,12 @@ size = Vector3(3, 3, 3)
 radius = 0.708598
 height = 2.64337
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("POSSESSABLE_CHECKER", "POSSESSABLE_MANAGER")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("POSSESSABLE_CHECKER", "POSSESSABLE_MANAGER", "ghost_rig")]
 collision_mask = 9
 script = ExtResource("1_dncad")
 POSSESSABLE_CHECKER = NodePath("PossessableChecker")
 POSSESSABLE_MANAGER = NodePath("PossessableManager")
+ghost_rig = NodePath("PlayerCollisionAndMesh/Ghost_Rig")
 
 [node name="PossessableChecker" type="Area3D" parent="."]
 disable_mode = 1

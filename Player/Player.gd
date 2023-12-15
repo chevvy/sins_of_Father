@@ -6,6 +6,7 @@ class_name Player extends CharacterBody3D
 @export var PUSH_FORCE = 10
 @export var POSSESSABLE_CHECKER: PossessableChecker
 @export var POSSESSABLE_MANAGER: PossessableManager
+@export var ghost_rig: GhostRig
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -21,9 +22,10 @@ func _ready():
 		printerr("[player] missing reference to possessableManager")
 		
 
-func set_player_settings(player_id: int, input_map: PlayerInputMap):
+func set_player_settings(player_id: int, input_map: PlayerInputMap, mat: BaseMaterial3D):
 	current_player_id = player_id
 	current_input_map = input_map
+	ghost_rig.set_player_material(mat)
 	
 
 func _is_player_ready():

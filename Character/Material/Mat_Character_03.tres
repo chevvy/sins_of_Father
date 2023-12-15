@@ -1,7 +1,7 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cltpu47fbncji"]
 
 [ext_resource type="Texture2D" uid="uid://c4tceyesofayx" path="res://Character/Material/Character_03.png" id="1_eba8q"]
-[ext_resource type="Material" uid="uid://c4d4ujfuvmhe7" path="res://Character/Material/Mat_Outline_03.tres" id="2_yg2p8"]
+[ext_resource type="Material" uid="uid://c4d4ujfuvmhe7" path="res://Character/Material/Mat_Outline_04.tres" id="2_yg2p8"]
 
 [resource]
 resource_name = "Character_Mat"
