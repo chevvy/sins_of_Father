@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d0lhsaljjxagk"]
+[gd_scene load_steps=24 format=3 uid="uid://d0lhsaljjxagk"]
 
 [ext_resource type="PackedScene" uid="uid://dfihjb47icua3" path="res://Environment/ground.tscn" id="1_lax2e"]
 [ext_resource type="PackedScene" uid="uid://3fhmyln3sout" path="res://Character/CharacterWithController.tscn" id="3_bv4ne"]
@@ -11,10 +11,14 @@
 [ext_resource type="Material" uid="uid://cltpu47fbncji" path="res://Character/Material/Mat_Character_03.tres" id="6_l6pe0"]
 [ext_resource type="Material" uid="uid://hhau5td7f5m1" path="res://Character/Material/Mat_Character_04.tres" id="7_7mo5q"]
 [ext_resource type="PackedScene" uid="uid://b4igp5ancnhj" path="res://Environment/Assets/Bench.tscn" id="7_hphln"]
+[ext_resource type="Material" uid="uid://bjvtxc2vs8yiu" path="res://Character/Material/Mat_Outline_01.tres" id="8_peijj"]
 [ext_resource type="PackedScene" uid="uid://cqskj4g2vs5tp" path="res://Environment/Assets/Cone.tscn" id="8_xbdb7"]
 [ext_resource type="PackedScene" uid="uid://b5eialyw6a5im" path="res://Environment/Assets/Counter.tscn" id="9_j544m"]
+[ext_resource type="Material" uid="uid://5vuvlovhslm" path="res://Character/Material/Mat_Outline_02.tres" id="9_kr7a5"]
+[ext_resource type="Material" uid="uid://domlmgw5lithg" path="res://Character/Material/Mat_Outline_03.tres" id="10_ryi2u"]
 [ext_resource type="PackedScene" uid="uid://bhdr1qsskqpmn" path="res://Environment/Assets/Cooler.tscn" id="10_tnp78"]
 [ext_resource type="PackedScene" uid="uid://bg6lfew2sar5q" path="res://Environment/Assets/Chair.tscn" id="11_s5ykf"]
+[ext_resource type="Material" uid="uid://c4d4ujfuvmhe7" path="res://Character/Material/Mat_Outline_04.tres" id="11_wxlyw"]
 [ext_resource type="PackedScene" uid="uid://mico01s75ed4" path="res://Environment/Assets/Panel.tscn" id="12_ech7l"]
 [ext_resource type="PackedScene" uid="uid://fam86exg3dd6" path="res://Environment/Assets/Table.tscn" id="13_8nx56"]
 [ext_resource type="PackedScene" uid="uid://bwcige5i3nkxw" path="res://Environment/Assets/Panel_02.tscn" id="13_8v324"]
@@ -30,6 +34,7 @@ runner_spawn_list = NodePath("../RunnerSpawnPosition")
 runner_goal_list = NodePath("../RunnerGoalPosition")
 runner_scene = ExtResource("3_bv4ne")
 runner_material = Array[BaseMaterial3D]([ExtResource("4_jkol8"), ExtResource("5_fqtck"), ExtResource("6_l6pe0"), ExtResource("7_7mo5q")])
+player_outlines = Array[BaseMaterial3D]([ExtResource("8_peijj"), ExtResource("9_kr7a5"), ExtResource("10_ryi2u"), ExtResource("11_wxlyw")])
 
 [node name="track" parent="." instance=ExtResource("3_h0ngw")]
 transform = Transform3D(1, -0.000218109, 0.000118454, 0.000218127, 1, -8.32592e-05, -0.000118423, 8.33042e-05, 1, 0.079, -0.01, -0.043)

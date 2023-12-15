@@ -8,6 +8,7 @@ const KEYBOARD_PLAYER_ID := 4
 @export var runner_goal_list: PositionsList
 @export var runner_scene: PackedScene
 @export var runner_material: Array[BaseMaterial3D] = [] 
+@export var player_outlines: Array[BaseMaterial3D] = []
 
 const KEYBOARD_INTERACT_VALUE := 4
 const KEYBOARD_INTERACT_KEY := "interact_4"
@@ -59,9 +60,8 @@ func _try_spawning_player(interactKey: String, input_map: PlayerInputMap):
 	var player = playerScene.instantiate();
 	if player is Player:
 		_set_player_states(player_id)
-		player.set_player_settings(player_id, input_map)
+		player.set_player_settings(player_id, input_map, player_outlines[player_id])
 		add_child(player)
-		# CharacterManager.on_player_spawn.emit(player_id)
 		print("spawned player" + String.num_int64(player_id))
 
 		spawn_runner_with_goal(player_id)
