@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PossessableRessourceManager="*res://Items/possessable_ressource_manager.gd"
 CameraManager="*res://Environment/camera_manager.gd"
+CharacterManager="*res://Character/character_manager.gd"
 
 [display]
 

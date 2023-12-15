@@ -1,19 +1,24 @@
-extends CharacterBody3D
+class_name CharacterWithController extends CharacterBody3D
 
 
 const SPEED = 40
 const PUSH_FORCE = 5
 var is_being_knockedback := false
 var knockback_dir : Vector3 = Vector3(0, 0 ,0)
+var player_id: int = -1
 
 @export var goal_marker: Marker3D
 @export var knockback_timer: Timer
 @export var char_visual: CharacterVisual
 
+func set_runner_info(new_player_id: int, mat: BaseMaterial3D):
+	player_id = new_player_id
+	char_visual.set_runner_material(mat)
+
 
 func _physics_process(delta):
 	# Add the gravity.
-	var move_vec = (goal_marker.position - position).normalized() * 5 * delta
+	var move_vec = (goal_marker.global_position - global_position).normalized() * 5 * delta
 	if is_being_knockedback:
 		knockback_dir.y = 0
 		velocity = move_vec + knockback_dir * PUSH_FORCE
@@ -25,6 +30,7 @@ func _physics_process(delta):
 	apply_collision()
 
 	lerp(knockback_dir, Vector3.ZERO, 0.8)
+
 
 func apply_collision():
 	# after calling move_and_slide()

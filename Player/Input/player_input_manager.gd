@@ -4,6 +4,10 @@ const KEYBOARD_PLAYER_ID := 4
 
 @export var inputMaps: Array[PlayerInputMap] = []
 @export var playerScene: PackedScene
+@export var runner_spawn_list: PositionsList
+@export var runner_goal_list: PositionsList
+@export var runner_scene: PackedScene
+@export var runner_material: Array[BaseMaterial3D] = [] 
 
 var playerIdPerSpawnKey: Dictionary = {
 	"interact_0": 0,
@@ -21,6 +25,12 @@ func _ready():
 	
 	if playerScene == null:
 		printerr("Missing player scene on input manager")
+
+	if runner_goal_list == null:
+		printerr("Missing runner_goal_list on input manager")
+
+	if runner_spawn_list == null:
+		printerr("Missing runner_spawn_list on input manager")
 
 
 func _unhandled_input(event):
@@ -46,10 +56,21 @@ func _try_spawning_player(interactKey: String, input_map: PlayerInputMap):
 		_set_player_states(player_id)
 		player.set_player_settings(player_id, input_map)
 		add_child(player)
+		# CharacterManager.on_player_spawn.emit(player_id)
 		print("spawned player" + String.num_int64(player_id))
+
+		spawn_runner_with_goal(player_id)
 	else:
 		printerr("playerScene reference in inputmanager is not a player")
 		player.queue_free()
+
+func spawn_runner_with_goal(player_id: int):
+	var runner := runner_scene.instantiate() as CharacterWithController
+	add_child(runner)
+	runner.goal_marker = runner_goal_list.get_position_for_player(player_id)
+	runner.position = runner_spawn_list.get_position_for_player(player_id).position
+	runner.set_runner_info(player_id, runner_material[player_id])
+	runner.rotation.y = 90
 
 func _set_player_states(id: int):
 	if playerStates.has(id):
