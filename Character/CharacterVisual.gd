@@ -3,6 +3,7 @@ class_name CharacterVisual extends Node3D
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @export var character_mesh: MeshInstance3D
 
+
 func _ready():
 	#idle_animation()
 	run_animation()

@@ -17,6 +17,9 @@ func try_possess() -> PossessableData:
 func _on_body_entered(body):
 	if body is Possessable:
 		latest_possessable = body
+		# todo change for actual player id
+		latest_possessable.on_hover(0)
+		
 	pass # Replace with function body.
 
 
@@ -35,4 +38,5 @@ func remove_possessable():
 		print("cant remove possessable, no current possessable")
 		return
 		
+	latest_possessable.on_hover_exit()
 	latest_possessable = null

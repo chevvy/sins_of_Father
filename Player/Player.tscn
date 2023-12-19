@@ -34,11 +34,12 @@ script = ExtResource("3_axivo")
 playerMesh = NodePath("../PlayerCollisionAndMesh")
 playerRootNode = NodePath("..")
 
-[node name="PlayerCollisionAndMesh" type="CollisionShape3D" parent="." node_paths=PackedStringArray("ghost", "possessable_mesh")]
+[node name="PlayerCollisionAndMesh" type="CollisionShape3D" parent="." node_paths=PackedStringArray("ghost", "possessable_mesh", "player")]
 shape = SubResource("CapsuleShape3D_eesep")
 script = ExtResource("4_pye3q")
 ghost = NodePath("Ghost_Rig")
 possessable_mesh = NodePath("PossessableMesh")
+player = NodePath("..")
 
 [node name="Ghost_Rig" parent="PlayerCollisionAndMesh" instance=ExtResource("5_ud0tq")]
 

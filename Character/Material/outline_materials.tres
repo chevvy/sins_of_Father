@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=6 format=3 uid="uid://pvnxunb4j8mj"]
+
+[ext_resource type="Material" uid="uid://bjvtxc2vs8yiu" path="res://Character/Material/Mat_Outline_01.tres" id="1_rugqq"]
+[ext_resource type="Material" uid="uid://5vuvlovhslm" path="res://Character/Material/Mat_Outline_02.tres" id="2_y2ooq"]
+[ext_resource type="Material" uid="uid://domlmgw5lithg" path="res://Character/Material/Mat_Outline_03.tres" id="3_0ilbf"]
+[ext_resource type="Material" uid="uid://c4d4ujfuvmhe7" path="res://Character/Material/Mat_Outline_04.tres" id="4_xkumo"]
+
+[sub_resource type="GDScript" id="GDScript_mq657"]
+script/source = "extends Resource
+
+@export var outline_mat: Array[BaseMaterial3D] = []
+"
+
+[resource]
+script = SubResource("GDScript_mq657")
+outline_mat = Array[BaseMaterial3D]([ExtResource("1_rugqq"), ExtResource("2_y2ooq"), ExtResource("3_0ilbf"), ExtResource("4_xkumo")])
