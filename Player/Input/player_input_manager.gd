@@ -45,6 +45,9 @@ func _unhandled_input(event):
 
 
 func _input(event):
+	if event.is_action_pressed("start"):
+		GameStateManager.on_start.emit()
+	
 	for input_map in inputMaps:
 		var interactKey := input_map.interact
 		if event.is_action_pressed(interactKey):

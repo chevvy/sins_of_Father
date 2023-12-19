@@ -42,7 +42,7 @@ transform = Transform3D(1, -0.000218109, 0.000118454, 0.000218127, 1, -8.32592e-
 [node name="world_environment" parent="." instance=ExtResource("4_2bakf")]
 
 [node name="Clock" parent="." instance=ExtResource("5_8oghq")]
-transform = Transform3D(0.918259, 0, 0.395979, 0, 1, 0, -0.395979, 0, 0.918259, 1.39833, 0.118567, -31.6088)
+transform = Transform3D(0.918259, 0, 0.395979, 0, 1, 0, -0.395979, 0, 0.918259, -9.60167, 0.118567, -31.6088)
 
 [node name="Assets" type="Node3D" parent="."]
 
