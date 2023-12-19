@@ -54,7 +54,7 @@ func _input(event):
 func _try_spawning_player(interactKey: String, input_map: PlayerInputMap):
 	var player_id: int = _get_adjusted_player_id(interactKey)
 	
-	if list_of_spawned_player_id.has(player_id):
+	if list_of_spawned_player_id.has(player_id) or player_id == -1:
 		return
 
 	var player = playerScene.instantiate();
@@ -101,6 +101,9 @@ func _get_adjusted_player_id(interact_key: String) -> int:
 	
 	# keyboard spawning logic
 	if base_player_id == KEYBOARD_INTERACT_VALUE:
+		if is_keyboard_spawned:
+			return -1
+			
 		var adjusted_player_id: int = 0
 		# if we already have values
 		if list_of_spawned_player_id.size() != 0:
