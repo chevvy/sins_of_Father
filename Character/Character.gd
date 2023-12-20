@@ -1,6 +1,6 @@
 class_name Character extends Node3D
 
-# TODO REMOVE
+# TODO DELETE CLASS
 @export var path_follow: PathFollow3D
 
 
