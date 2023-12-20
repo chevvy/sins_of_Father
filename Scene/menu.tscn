@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://4fsyu83bn2f0"]
+[gd_scene load_steps=19 format=3 uid="uid://4fsyu83bn2f0"]
 
 [ext_resource type="Texture2D" uid="uid://djasc2ga7quo5" path="res://VFX/Checker_Alpha.png" id="1_1ytqd"]
+[ext_resource type="Script" path="res://Scene/menu.gd" id="1_covv7"]
 [ext_resource type="FontFile" uid="uid://cy5qefxjl2xa1" path="res://Font/darkforest.ttf" id="2_ioubi"]
 [ext_resource type="Texture2D" uid="uid://b68xd4ptl01in" path="res://VFX/Select_Frame.png" id="3_rll0x"]
 
@@ -250,6 +251,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_covv7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -355,10 +357,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -113.0
-offset_right = 113.0
-offset_bottom = 115.0
+offset_left = 169.0
+offset_top = -83.0
+offset_right = 395.0
+offset_bottom = 145.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_rll0x")
@@ -412,9 +414,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -40.0
-offset_top = -480.0
+offset_top = -120.0
 offset_right = 40.0
-offset_bottom = 400.0
+offset_bottom = 760.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1ytqd")
@@ -478,9 +480,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -40.0
-offset_top = -480.0
+offset_top = -120.0
 offset_right = 40.0
-offset_bottom = 400.0
+offset_bottom = 760.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1ytqd")

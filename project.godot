@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Sins Of The Fathers"
-run/main_scene="res://main.tscn"
+run/main_scene="res://Scene/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PossessableRessourceManager="*res://Items/possessable_ressource_manager.gd"
 CameraManager="*res://Environment/camera_manager.gd"
 GameStateManager="*res://Managers/game_state_manager.gd"
+LevelManager="*res://Managers/level_manager.gd"
 
 [display]
 
