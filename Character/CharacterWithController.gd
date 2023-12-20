@@ -2,7 +2,7 @@ class_name CharacterWithController extends CharacterBody3D
 
 
 const SPEED = 40
-const PUSH_FORCE = 5
+const PUSH_FORCE = 2
 var is_being_knockedback := false
 var knockback_dir : Vector3 = Vector3(0, 0 ,0)
 var player_id: int = -1

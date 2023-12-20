@@ -7,6 +7,8 @@ var ui_color = {
 	"green": Color(0, 1, 0, 1)
 }
 
+var colors = ["red", "blue", "yellow", "green"]
+
 @onready var panels = get_tree().get_nodes_in_group("panel_color")
 @onready var win_label = $WIN_COLOR
 @onready var win_title = $WIN_TITLE
@@ -18,6 +20,10 @@ func _ready():
 	root_cont.hide()
 	win_label.hide()
 	win_title.hide()
+
+	var color = colors[GameStateManager.player_id_winner]
+	
+	set_color(color)
 
 
 func set_color(value: String):
@@ -43,5 +49,6 @@ func _on_animation_player_animation_finished(anim_name):
 		root_cont.hide()
 		win_label.hide()
 		win_title.hide()
+		LevelManager.load_menu()
 	else:
 		return

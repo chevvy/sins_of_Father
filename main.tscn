@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0lhsaljjxagk"]
+[gd_scene load_steps=25 format=3 uid="uid://d0lhsaljjxagk"]
 
 [ext_resource type="PackedScene" uid="uid://dfihjb47icua3" path="res://Environment/ground.tscn" id="1_lax2e"]
 [ext_resource type="PackedScene" uid="uid://3fhmyln3sout" path="res://Character/CharacterWithController.tscn" id="3_bv4ne"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://fam86exg3dd6" path="res://Environment/Assets/Table.tscn" id="13_8nx56"]
 [ext_resource type="PackedScene" uid="uid://bwcige5i3nkxw" path="res://Environment/Assets/Panel_02.tscn" id="13_8v324"]
 [ext_resource type="Script" path="res://position_list.gd" id="15_oajcy"]
+[ext_resource type="PackedScene" uid="uid://dhttxkcj8ja5t" path="res://win_detector.tscn" id="24_id5mh"]
 
 [node name="Main" type="Node"]
 
@@ -249,3 +250,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9007, 0, 3)
 
 [node name="RunnerGoal3" type="Marker3D" parent="RunnerGoalPosition"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9007, 0, 9)
+
+[node name="WinDetector" parent="." instance=ExtResource("24_id5mh")]
