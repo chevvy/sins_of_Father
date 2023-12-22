@@ -1,8 +1,9 @@
 class_name CharacterWithController extends CharacterBody3D
 
 
-const SPEED = 40
-const PUSH_FORCE = 2
+@export var  SPEED = 30
+@export var PUSH_FORCE = 2
+@export var COLLISION_PUSH_FORCE = 6
 var is_being_knockedback := false
 var knockback_dir : Vector3 = Vector3(0, 0 ,0)
 var player_id: int = -1
@@ -30,6 +31,9 @@ func set_runner_info(new_player_id: int, mat: BaseMaterial3D):
 
 
 func _physics_process(delta):
+	if position.y < 0:
+		position.y = 0
+	
 	if not has_game_started:
 		return
 	
@@ -52,23 +56,22 @@ func apply_collision():
 	# after calling move_and_slide()
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
-		if c.get_collider() is RigidBody3D:
+		var collider = c.get_collider()
+		if collider is Possessable:
+			collider.hit_possessable()
+		if collider is RigidBody3D:
 			if is_being_knockedback:
 				return
 			
 			var dir = -c.get_normal()
-			c.get_collider().apply_central_impulse(dir * PUSH_FORCE)
+
+			c.get_collider().apply_central_impulse(dir * COLLISION_PUSH_FORCE)
 			knockback_dir = c.get_position().direction_to(global_position)
 			is_being_knockedback = true
 			knockback_timer.start()
 			print("start of knockback")
 			char_visual.hit_animation()
-			
-			# apply impulse on possessable
-			dir.y = 1
-			# TODO apply random rotation and direction so that it feels bit more real
-			c.get_collider().apply_central_impulse(dir * PUSH_FORCE * 10)
-				
+
 
 
 func _on_knockback_timer_timeout():

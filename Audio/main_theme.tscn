@@ -11,9 +11,11 @@ main_loop = NodePath("MainLoop")
 
 [node name="Intro" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_75f7i")
+volume_db = -10.0
 autoplay = true
 
 [node name="MainLoop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ba10s")
+volume_db = -10.0
 
 [connection signal="finished" from="Intro" to="." method="_on_intro_finished"]

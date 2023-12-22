@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://crwj6wjnr1s71"]
+[gd_scene load_steps=19 format=3 uid="uid://crwj6wjnr1s71"]
 
 [ext_resource type="Script" path="res://Ui/encore.gd" id="1_7y1dw"]
 [ext_resource type="Texture2D" uid="uid://om80wevgv78j" path="res://Ui/side.png" id="1_mdfjb"]
 [ext_resource type="Material" uid="uid://cwon70ua4x6gk" path="res://Ui/ui_winner_mat.tres" id="2_gm1qc"]
 [ext_resource type="FontFile" uid="uid://cy5qefxjl2xa1" path="res://Font/darkforest.ttf" id="3_tcwk8"]
+[ext_resource type="AudioStream" uid="uid://xdykymgqtxae" path="res://Audio/sfx/explosion_with_synth.wav" id="5_whpkw"]
 
 [sub_resource type="Animation" id="Animation_50374"]
 resource_name = "Appear"
@@ -602,5 +603,9 @@ text = "WIN
 label_settings = SubResource("LabelSettings_vhw78")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_whpkw")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

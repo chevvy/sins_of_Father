@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqbqtrbowqmoq"]
+
+[ext_resource type="PackedScene" uid="uid://mico01s75ed4" path="res://Environment/Assets/Panel.tscn" id="1_2wcro"]
+[ext_resource type="PackedScene" uid="uid://bg6lfew2sar5q" path="res://Environment/Assets/Chair.tscn" id="2_siuf7"]
+[ext_resource type="PackedScene" uid="uid://fam86exg3dd6" path="res://Environment/Assets/Table.tscn" id="3_p0ump"]
+
+[node name="DEBUG" type="Node3D"]
+
+[node name="Panel" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH") instance=ExtResource("1_2wcro")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1541, 6.67268, -12.088)
+POSSESSABLE_MESH = NodePath("")
+
+[node name="Chair" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX") instance=ExtResource("2_siuf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4277, 0, -9.46642)
+POSSESSABLE_MESH = NodePath("")
+HIT_SFX = NodePath("")
+
+[node name="Table" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX") instance=ExtResource("3_p0ump")]
+transform = Transform3D(0.526006, 0, -0.850481, 0, 1, 0, 0.850481, 0, 0.526006, -13.8556, 0, -9.49495)
+POSSESSABLE_MESH = NodePath("")
+HIT_SFX = NodePath("")
+
+[node name="Panel2" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH") instance=ExtResource("1_2wcro")]
+transform = Transform3D(0.603236, 0, -0.797563, 0, 1, 0, 0.797563, 0, 0.603236, -7.83882, 6.67268, -10.7968)
+POSSESSABLE_MESH = NodePath("")
+
+[node name="Chair2" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX") instance=ExtResource("2_siuf7")]
+transform = Transform3D(0.746801, 0, -0.665048, 0, 1, 0, 0.665048, 0, 0.746801, -23.296, 1.62889, -11.7184)
+POSSESSABLE_MESH = NodePath("")
+HIT_SFX = NodePath("")
+
+[node name="Table2" parent="." node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX") instance=ExtResource("3_p0ump")]
+transform = Transform3D(0.526006, 8.35717e-17, -0.850481, -0.437737, 0.857374, -0.270732, 0.72918, 0.514694, 0.450984, -19.5579, 3.65368, -8.25272)
+POSSESSABLE_MESH = NodePath("")
+HIT_SFX = NodePath("")

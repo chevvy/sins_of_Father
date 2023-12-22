@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://fam86exg3dd6"]
+[gd_scene load_steps=30 format=3 uid="uid://fam86exg3dd6"]
 
 [ext_resource type="Script" path="res://Items/possessable.gd" id="1_h2s76"]
 [ext_resource type="Material" uid="uid://dvtg5ljajf24o" path="res://Environment/Assets/Table.tres" id="2_5730f"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_ai7pw"]
+[ext_resource type="AudioStream" uid="uid://bopqm37bxfbp4" path="res://Audio/sfx/SFX_Chair.wav" id="4_0pteo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j1scp"]
 resource_name = "Table"
@@ -143,12 +144,13 @@ points = PackedVector3Array(0.384032, 1.87876, -1.03428, 2.4578, 2.26279, 1.1157
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7diyx"]
 points = PackedVector3Array(-2.38049, 2.26273, 1.19289, -2.38049, 2.0323, -1.1881, -2.30372, 1.8788, -1.03428, 0.383476, 2.26273, -1.1881, 0.383476, 1.8788, 1.03884, 0.383476, 2.26273, 1.19289, -2.0339, 1.7354, 0.630081, 0.383476, 1.8788, -1.03428, -2.38049, 2.26273, -1.1881, -0.768221, 1.72514, -0.112739, -2.38049, 2.0323, 1.19289, -1.84316, 1.72514, -0.650421, 0.383476, 1.80202, -0.0358273, -2.30372, 1.8788, 1.03884, -2.45753, 2.0323, -1.11119, 0.383476, 2.0323, 1.19289, 0.383476, 2.0323, -1.1881, -1.84316, 1.72514, 0.654979, -2.45753, 2.26273, 1.11575, -2.45753, 2.0323, 1.11575, -0.768221, 1.72514, 0.117297, -2.45753, 2.26273, -1.11119, -2.0339, 1.7354, -0.625515, 0.383476, 1.80202, 0.0403851)
 
-[node name="Table" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
+[node name="Table" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_h2s76")
 POSSESSABLE_MESH = NodePath("Table_001")
 POSSESSABLE_NAME = 7
+HIT_SFX = NodePath("HitSfx")
 
 [node name="Table_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 0, 0, 0)
@@ -237,3 +239,6 @@ shape = SubResource("ConvexPolygonShape3D_2wio8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.35, 0, 0, 0, 1.35, 0, 0, 0, 1.35, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7diyx")
+
+[node name="HitSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0pteo")
