@@ -2,6 +2,7 @@ class_name Possessable extends RigidBody3D
 
 @export var POSSESSABLE_MESH: MeshInstance3D
 @export var POSSESSABLE_NAME: PossessableRessourceManager.PossessableName
+@export var HIT_SFX: AudioStreamPlayer
 
 var outlines_res = load("res://Character/Material/outline_materials.tres")
 var outline_mat: Array[BaseMaterial3D]
@@ -30,6 +31,10 @@ func _physics_process(_delta):
 func apply_force_to_possessable(vec3: Vector3):
 	force = vec3
 	should_apply_force = true
+
+func hit_possessable():
+	HIT_SFX.play()
+	print("HIT")
 	
 func on_hover(player_id: int):
 	POSSESSABLE_MESH.material_overlay = outline_mat[player_id]

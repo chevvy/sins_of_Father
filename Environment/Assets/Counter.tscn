@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5eialyw6a5im"]
+[gd_scene load_steps=12 format=3 uid="uid://b5eialyw6a5im"]
 
 [ext_resource type="Script" path="res://Items/possessable.gd" id="1_mkk6s"]
 [ext_resource type="Material" uid="uid://2772v68fa3lc" path="res://Environment/Assets/Counter.tres" id="2_0wjad"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_g4p1s"]
+[ext_resource type="AudioStream" uid="uid://ntxn86mdkber" path="res://Audio/sfx/SFX_Locker.wav" id="4_3jsbl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucxjb"]
 resource_name = "Counter"
@@ -85,12 +86,13 @@ shadow_mesh = SubResource("ArrayMesh_ufvig")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_slaca"]
 points = PackedVector3Array(-1.97087, 0.0238429, -0.8957, 2.22912, 2.5449, 1.06395, 2.25634, 0.304, 1.07713, 2.25634, 0.304, -1.10879, -2.22922, 2.5449, -1.0956, -2.22922, 2.5449, 1.06395, 2.22912, 2.5449, -1.0956, -2.25643, 0.304, 1.07713, 2.0011, 0.0043454, 0.877581, -2.25643, 0.304, -1.10879, -1.9903, 0.0113496, 0.872718, 1.97077, 0.0238429, -0.8957)
 
-[node name="Counter" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
+[node name="Counter" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_mkk6s")
 POSSESSABLE_MESH = NodePath("Counter_001")
 POSSESSABLE_NAME = 3
+HIT_SFX = NodePath("hitsfx")
 
 [node name="Counter_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
@@ -107,3 +109,6 @@ surface_material_override/0 = ExtResource("2_g4p1s")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_slaca")
+
+[node name="hitsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_3jsbl")

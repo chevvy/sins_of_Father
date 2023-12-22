@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqskj4g2vs5tp"]
+[gd_scene load_steps=14 format=3 uid="uid://cqskj4g2vs5tp"]
 
 [ext_resource type="Script" path="res://Environment/Assets/Cone.gd" id="1_ux01a"]
 [ext_resource type="Material" uid="uid://hjnh0j1lw8o" path="res://Environment/Assets/Cone.tres" id="2_mtfot"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="3_wpbl6"]
+[ext_resource type="AudioStream" uid="uid://b4pkic3yebudq" path="res://Audio/sfx/SFX_Basket.wav" id="4_b2id3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4jkmc"]
 resource_name = "Cone"
@@ -91,12 +92,13 @@ shadow_mesh = SubResource("ArrayMesh_ltmpi")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qb8uf"]
 points = PackedVector3Array(0.376471, 1.78845, 0.142026, 0.0654079, 0.402822, -0.95047, 0.0650321, 1.78845, -0.397303, 0.311251, 1.78845, 0.255004, 0.855753, 0.402822, 0.418447, 0.960068, 0.0280102, 0.478842, 0.0652199, 0.0280102, -1.07094, -0.0655958, 0.402822, -0.95047, -0.0652199, 1.78845, -0.397303, 0.790158, 0.402822, 0.531913, -0.311439, 1.78845, 0.255004, 0.89466, 0.0280102, 0.591983, 0.927552, 0.0106789, 0.535494, 5.96046e-08, 0.0106789, -1.0711, -0.0654079, 0.0280102, -1.07094, -0.855941, 0.402822, 0.418447, -0.376659, 1.78845, 0.142026, -0.790345, 0.402822, 0.531913, -0.894848, 0.0280102, 0.591983, -0.92774, 0.0106789, 0.535494, 0.865903, 0, 0.499843, 5.96046e-08, 0, -1.00012, -0.960068, 0.0280102, 0.478842, -0.866091, 0, 0.499843)
 
-[node name="Cone" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
+[node name="Cone" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_ux01a")
 POSSESSABLE_MESH = NodePath("Cone_002")
 POSSESSABLE_NAME = 2
+HIT_SFX = NodePath("hitsfx")
 
 [node name="Cone_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -163,3 +165,6 @@ surface_material_override/0 = ExtResource("3_wpbl6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.575, 0, 0, 0, 1.575, 0, 0, 0, 1.575, 0, -0.05, 0)
 shape = SubResource("ConvexPolygonShape3D_qb8uf")
+
+[node name="hitsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_b2id3")

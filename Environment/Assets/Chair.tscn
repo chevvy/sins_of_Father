@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bg6lfew2sar5q"]
+[gd_scene load_steps=12 format=3 uid="uid://bg6lfew2sar5q"]
 
 [ext_resource type="Script" path="res://Items/possessable.gd" id="1_au46t"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_56bxp"]
 [ext_resource type="Material" uid="uid://0ed7oujdiao1" path="res://Environment/Assets/Chair.tres" id="2_cpie7"]
+[ext_resource type="AudioStream" uid="uid://bopqm37bxfbp4" path="res://Audio/sfx/SFX_Chair.wav" id="4_20dcu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mylwp"]
 resource_name = "Chair"
@@ -89,12 +90,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_oi1ct")
 
-[node name="Chair" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
+[node name="Chair" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_au46t")
 POSSESSABLE_MESH = NodePath("Chair_001")
 POSSESSABLE_NAME = 5
+HIT_SFX = NodePath("hit_sfx")
 
 [node name="Chair_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
@@ -112,3 +114,6 @@ transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 mesh = SubResource("ArrayMesh_mnwfl")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_56bxp")
+
+[node name="hit_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_20dcu")

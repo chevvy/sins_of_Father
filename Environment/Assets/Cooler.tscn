@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhdr1qsskqpmn"]
+[gd_scene load_steps=12 format=3 uid="uid://bhdr1qsskqpmn"]
 
 [ext_resource type="Script" path="res://Items/possessable.gd" id="1_auywe"]
 [ext_resource type="Material" uid="uid://2g1v3hlc4k5u" path="res://Environment/Assets/Cooler.tres" id="2_ahuod"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_ykfxn"]
+[ext_resource type="AudioStream" uid="uid://b4pkic3yebudq" path="res://Audio/sfx/SFX_Basket.wav" id="4_xkol2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ans5w"]
 resource_name = "Cooler"
@@ -89,12 +90,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_477rb")
 
-[node name="Cooler" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH")]
+[node name="Cooler" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_auywe")
 POSSESSABLE_MESH = NodePath("Cooler_Bot")
 POSSESSABLE_NAME = 4
+HIT_SFX = NodePath("hitsfx")
 
 [node name="Cooler_Bot" type="MeshInstance3D" parent="."]
 material_override = ExtResource("2_ahuod")
@@ -109,3 +111,6 @@ shape = SubResource("ConvexPolygonShape3D_f4p7w")
 mesh = SubResource("ArrayMesh_0qjpt")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_ykfxn")
+
+[node name="hitsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xkol2")

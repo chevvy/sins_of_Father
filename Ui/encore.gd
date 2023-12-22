@@ -7,7 +7,7 @@ var ui_color = {
 	"green": Color(0, 1, 0, 1)
 }
 
-var colors = ["red", "blue", "yellow", "green"]
+var colors = ["blue", "green", "red", "yellow"]
 
 @onready var panels = get_tree().get_nodes_in_group("panel_color")
 @onready var win_label = $WIN_COLOR

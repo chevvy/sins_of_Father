@@ -12,6 +12,7 @@ collision_layer = 4
 collision_mask = 2
 axis_lock_linear_z = true
 script = ExtResource("1_sauk7")
+COLLISION_PUSH_FORCE = 10
 knockback_timer = NodePath("KnockbackTimer")
 char_visual = NodePath("Character")
 

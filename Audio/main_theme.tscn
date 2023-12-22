@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfs6b73lvdxb8"]
+
+[ext_resource type="Script" path="res://MainTheme.gd" id="1_fag6k"]
+[ext_resource type="AudioStream" uid="uid://d2mcadqvjougu" path="res://Audio/Gameplay_Intro.wav" id="2_75f7i"]
+[ext_resource type="AudioStream" uid="uid://scksg2cncy6i" path="res://Audio/Gameplay_Loop.wav" id="3_ba10s"]
+
+[node name="MainTheme" type="Node3D" node_paths=PackedStringArray("intro_loop", "main_loop")]
+script = ExtResource("1_fag6k")
+intro_loop = NodePath("Intro")
+main_loop = NodePath("MainLoop")
+
+[node name="Intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_75f7i")
+volume_db = -10.0
+autoplay = true
+
+[node name="MainLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ba10s")
+volume_db = -10.0
+
+[connection signal="finished" from="Intro" to="." method="_on_intro_finished"]

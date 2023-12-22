@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwcige5i3nkxw"]
+[gd_scene load_steps=12 format=3 uid="uid://bwcige5i3nkxw"]
 
 [ext_resource type="Material" uid="uid://ikarb0goats4" path="res://Environment/Assets/Panel_02.tres" id="1_pakl4"]
+[ext_resource type="Script" path="res://Items/possessable.gd" id="1_yolty"]
 [ext_resource type="Material" uid="uid://c7eok5c6ipied" path="res://Environment/Assets/Outline.tres" id="2_5ahpm"]
+[ext_resource type="AudioStream" uid="uid://b4pkic3yebudq" path="res://Audio/sfx/SFX_Basket.wav" id="4_um5de"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q44d7"]
 resource_name = "Panel"
@@ -84,9 +86,13 @@ shadow_mesh = SubResource("ArrayMesh_ut2vq")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lywwr"]
 points = PackedVector3Array(2.03175, 2.06349, 0.23799, -1.96964, 0.000681425, -0.999722, -2.03175, 0.0956046, -1.03175, -2.03175, 0.0320318, 1.06349, 1.96964, 0.000681425, -0.999722, -2.03175, 1.99971, -0.269618, 2.03175, 0.0320318, 1.06349, 2.03175, 1.99971, -0.269618, -2.03175, 2.06349, 0.23799, 2.03175, 0.285913, -0.967962, -2.03175, 1.61869, 0.428522, -2.03175, 0.920821, -0.714056, 2.03175, 1.61869, 0.428522, 2.03175, 0.0956046, -1.03175, 2.03175, 0.920821, -0.714056, -2.03175, 0.285913, -0.967962)
 
-[node name="Panel" type="RigidBody3D"]
+[node name="Panel" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
+script = ExtResource("1_yolty")
+POSSESSABLE_MESH = NodePath("Panel_002")
+POSSESSABLE_NAME = 6
+HIT_SFX = NodePath("hitsfx")
 
 [node name="Panel_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -103,3 +109,6 @@ surface_material_override/0 = ExtResource("2_5ahpm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_lywwr")
+
+[node name="hitsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_um5de")
