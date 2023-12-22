@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ntxn86mdkber"
-path="res://.godot/imported/SFX_Locker.wav-f608b8f65ac8e74ef73c485086e56c39.sample"
+path="res://.godot/imported/SFX_Locker.wav-50ed666a930deb7fa3d241a81c6b8305.sample"
 
 [deps]
 
-source_file="res://Audio/SFX_Locker.wav"
-dest_files=["res://.godot/imported/SFX_Locker.wav-f608b8f65ac8e74ef73c485086e56c39.sample"]
+source_file="res://Audio/sfx/SFX_Locker.wav"
+dest_files=["res://.godot/imported/SFX_Locker.wav-50ed666a930deb7fa3d241a81c6b8305.sample"]
 
 [params]
 

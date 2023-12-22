@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bopqm37bxfbp4"
-path="res://.godot/imported/SFX_Chair.wav-9fe2b43b0b74e4f45dc429750fa87a84.sample"
+uid="uid://b4pkic3yebudq"
+path="res://.godot/imported/SFX_Basket.wav-c09f870e38f8ab837351347eac82e800.sample"
 
 [deps]
 
-source_file="res://Audio/SFX_Chair.wav"
-dest_files=["res://.godot/imported/SFX_Chair.wav-9fe2b43b0b74e4f45dc429750fa87a84.sample"]
+source_file="res://Audio/sfx/SFX_Basket.wav"
+dest_files=["res://.godot/imported/SFX_Basket.wav-c09f870e38f8ab837351347eac82e800.sample"]
 
 [params]
 

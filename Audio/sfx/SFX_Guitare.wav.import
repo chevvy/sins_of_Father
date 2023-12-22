@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b78g3qi2ickcg"
-path="res://.godot/imported/SFX_Guitare.wav-5ee7f7d8abb80353323e2e7c2d353de4.sample"
+path="res://.godot/imported/SFX_Guitare.wav-ce65c3bc0864949b4790e4a2de5989be.sample"
 
 [deps]
 
-source_file="res://Audio/SFX_Guitare.wav"
-dest_files=["res://.godot/imported/SFX_Guitare.wav-5ee7f7d8abb80353323e2e7c2d353de4.sample"]
+source_file="res://Audio/sfx/SFX_Guitare.wav"
+dest_files=["res://.godot/imported/SFX_Guitare.wav-ce65c3bc0864949b4790e4a2de5989be.sample"]
 
 [params]
 
