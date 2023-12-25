@@ -29,6 +29,8 @@ func _physics_process(_delta):
 		should_apply_force = false
 
 func apply_force_to_possessable(vec3: Vector3):
+	print("applied force: ")
+	print(vec3)
 	force = vec3
 	should_apply_force = true
 

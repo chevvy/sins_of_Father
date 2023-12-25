@@ -63,13 +63,11 @@ func apply_collision():
 			if is_being_knockedback:
 				return
 			
+			is_being_knockedback = true
 			var dir = -c.get_normal()
-
 			c.get_collider().apply_central_impulse(dir * COLLISION_PUSH_FORCE)
 			knockback_dir = c.get_position().direction_to(global_position)
-			is_being_knockedback = true
 			knockback_timer.start()
-			print("start of knockback")
 			char_visual.hit_animation()
 
 
