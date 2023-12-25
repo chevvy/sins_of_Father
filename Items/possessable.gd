@@ -34,10 +34,13 @@ func apply_force_to_possessable(vec3: Vector3):
 
 func hit_possessable():
 	HIT_SFX.play()
-	print("HIT")
 	
 func on_hover(player_id: int):
-	POSSESSABLE_MESH.material_overlay = outline_mat[player_id]
+	if player_id < 0:
+		POSSESSABLE_MESH.material_overlay = outline_mat[0]
+	else:
+		POSSESSABLE_MESH.material_overlay = outline_mat[player_id]
+	
 	
 func on_hover_exit():
 	POSSESSABLE_MESH.material_overlay = null
