@@ -73,6 +73,5 @@ func apply_collision():
 
 
 func _on_knockback_timer_timeout():
-	print("end of knockback")
 	is_being_knockedback = false
 	char_visual.run_animation()
