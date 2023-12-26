@@ -93,6 +93,7 @@ shadow_mesh = SubResource("ArrayMesh_oi1ct")
 [node name="Chair" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
+continuous_cd = true
 script = ExtResource("1_au46t")
 POSSESSABLE_MESH = NodePath("Chair_001")
 POSSESSABLE_NAME = 5

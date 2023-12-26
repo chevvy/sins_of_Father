@@ -89,6 +89,7 @@ points = PackedVector3Array(2.03175, 2.06349, 0.23799, -1.96964, 0.000681425, -0
 [node name="Panel" type="RigidBody3D" node_paths=PackedStringArray("POSSESSABLE_MESH", "HIT_SFX")]
 collision_layer = 2
 collision_mask = 15
+continuous_cd = true
 script = ExtResource("1_yolty")
 POSSESSABLE_MESH = NodePath("Panel_002")
 POSSESSABLE_NAME = 6

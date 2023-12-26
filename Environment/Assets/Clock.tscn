@@ -118,6 +118,7 @@ points = PackedVector3Array(-1.99351, 0.902659, -0.3026, 2.15785, 3.85622, 0.330
 [node name="Clock" type="RigidBody3D"]
 collision_layer = 2
 collision_mask = 15
+continuous_cd = true
 
 [node name="Clock_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
