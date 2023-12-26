@@ -57,24 +57,24 @@ func apply_collision():
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
 		var collider = c.get_collider()
-		if collider is Possessable:
-			collider.hit_possessable()
 		if collider is RigidBody3D:
 			if is_being_knockedback:
 				return
+			if collider is Possessable:
+				collider.hit_possessable()
 			
-			var dir = -c.get_normal()
-
-			c.get_collider().apply_central_impulse(dir * COLLISION_PUSH_FORCE)
-			knockback_dir = c.get_position().direction_to(global_position)
 			is_being_knockedback = true
+			var dir = -c.get_normal()
+			var applied_force = dir * COLLISION_PUSH_FORCE
+			print("applied force = ")
+			print(applied_force)
+			c.get_collider().apply_central_impulse(applied_force)
+			knockback_dir = c.get_position().direction_to(global_position)
 			knockback_timer.start()
-			print("start of knockback")
 			char_visual.hit_animation()
 
 
 
 func _on_knockback_timer_timeout():
-	print("end of knockback")
 	is_being_knockedback = false
 	char_visual.run_animation()

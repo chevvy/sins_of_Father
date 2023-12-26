@@ -10,6 +10,7 @@ height = 3.79
 [node name="CharacterController" type="CharacterBody3D" node_paths=PackedStringArray("knockback_timer", "char_visual")]
 collision_layer = 4
 collision_mask = 2
+axis_lock_linear_y = true
 axis_lock_linear_z = true
 script = ExtResource("1_sauk7")
 COLLISION_PUSH_FORCE = 10
