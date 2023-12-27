@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://3fhmyln3sout" path="res://Character/CharacterWithController.tscn" id="3_bv4ne"]
 [ext_resource type="PackedScene" uid="uid://dtsr5n0n2w4jj" path="res://Environment/Track.tscn" id="3_h0ngw"]
 [ext_resource type="PackedScene" uid="uid://dstr5dso05ljk" path="res://Player/Input/PlayerInputSystems.tscn" id="3_vkeb7"]
-[ext_resource type="PackedScene" uid="uid://b2bxoaditrw1i" path="res://Environment/WorldEnvironment.tscn" id="4_2bakf"]
 [ext_resource type="Material" uid="uid://chnyxxwtpjblt" path="res://Character/Material/Mat_Character_01.tres" id="4_jkol8"]
 [ext_resource type="PackedScene" uid="uid://r8wjvsskxegb" path="res://Environment/Assets/Clock.tscn" id="5_8oghq"]
 [ext_resource type="Material" uid="uid://dvceat427cpjf" path="res://Character/Material/Mat_Character_02.tres" id="5_fqtck"]
@@ -20,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6lfew2sar5q" path="res://Environment/Assets/Chair.tscn" id="11_s5ykf"]
 [ext_resource type="Material" uid="uid://c4d4ujfuvmhe7" path="res://Character/Material/Mat_Outline_04.tres" id="11_wxlyw"]
 [ext_resource type="PackedScene" uid="uid://mico01s75ed4" path="res://Environment/Assets/Panel.tscn" id="12_ech7l"]
+[ext_resource type="PackedScene" uid="uid://b2bxoaditrw1i" path="res://Environment/WorldEnvironment.tscn" id="13_1t8xw"]
 [ext_resource type="PackedScene" uid="uid://fam86exg3dd6" path="res://Environment/Assets/Table.tscn" id="13_8nx56"]
 [ext_resource type="PackedScene" uid="uid://bwcige5i3nkxw" path="res://Environment/Assets/Panel_02.tscn" id="13_8v324"]
 [ext_resource type="Script" path="res://position_list.gd" id="15_oajcy"]
@@ -41,7 +41,7 @@ player_outlines = Array[BaseMaterial3D]([ExtResource("8_peijj"), ExtResource("9_
 [node name="track" parent="." instance=ExtResource("3_h0ngw")]
 transform = Transform3D(1, -0.000218109, 0.000118454, 0.000218127, 1, -8.32592e-05, -0.000118423, 8.33042e-05, 1, 0.079, -0.01, -0.043)
 
-[node name="world_environment" parent="." instance=ExtResource("4_2bakf")]
+[node name="world_environment" parent="." instance=ExtResource("13_1t8xw")]
 
 [node name="Clock" parent="." instance=ExtResource("5_8oghq")]
 transform = Transform3D(0.918259, 0, 0.395979, 0, 1, 0, -0.395979, 0, 0.918259, -9.60167, 0.118567, -31.6088)

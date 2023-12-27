@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://5b1ew3sxxubj"]
+
+[ext_resource type="FontFile" uid="uid://cy5qefxjl2xa1" path="res://Font/darkforest.ttf" id="1_r28w0"]
+
+[resource]
+font = ExtResource("1_r28w0")
+font_size = 60
+font_color = Color(1, 1, 0.592157, 1)
