@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c831mef6efqf8"
 path.s3tc="res://.godot/imported/Ghost_Rig_Ghost_ORM.png-609b40509ca87afa7eef55180995542d.s3tc.ctex"
+path.etc2="res://.godot/imported/Ghost_Rig_Ghost_ORM.png-609b40509ca87afa7eef55180995542d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://ImportedAssets/Ghost/Ghost_Rig_Ghost_ORM.png"
-dest_files=["res://.godot/imported/Ghost_Rig_Ghost_ORM.png-609b40509ca87afa7eef55180995542d.s3tc.ctex"]
+dest_files=["res://.godot/imported/Ghost_Rig_Ghost_ORM.png-609b40509ca87afa7eef55180995542d.s3tc.ctex", "res://.godot/imported/Ghost_Rig_Ghost_ORM.png-609b40509ca87afa7eef55180995542d.etc2.ctex"]
 
 [params]
 

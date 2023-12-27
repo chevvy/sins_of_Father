@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4mdgo128i2f8"
-path.s3tc="res://.godot/imported/Clock_C.png-54c9f45122ccce38e372ea74b5cf3eca.s3tc.ctex"
+path="res://.godot/imported/Clock_C.png-54c9f45122ccce38e372ea74b5cf3eca.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://ImportedAssets/Assets/Clock_C.png"
-dest_files=["res://.godot/imported/Clock_C.png-54c9f45122ccce38e372ea74b5cf3eca.s3tc.ctex"]
+dest_files=["res://.godot/imported/Clock_C.png-54c9f45122ccce38e372ea74b5cf3eca.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

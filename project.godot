@@ -176,5 +176,13 @@ start={
 
 [rendering]
 
-anti_aliasing/quality/msaa_3d=1
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+textures/webp_compression/compression_method=0
+textures/default_filters/anisotropic_filtering_level=0
+textures/decals/filter=0
+textures/light_projectors/filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_3d=2
 anti_aliasing/quality/screen_space_aa=1

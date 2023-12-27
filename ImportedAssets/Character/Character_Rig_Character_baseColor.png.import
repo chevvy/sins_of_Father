@@ -3,27 +3,26 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yfxkxwkt71uj"
-path.s3tc="res://.godot/imported/Character_Rig_Character_baseColor.png-09f062fac146d5b11ef505046cb75831.s3tc.ctex"
+path="res://.godot/imported/Character_Rig_Character_baseColor.png-09f062fac146d5b11ef505046cb75831.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={}
 
 [deps]
 
 source_file="res://ImportedAssets/Character/Character_Rig_Character_baseColor.png"
-dest_files=["res://.godot/imported/Character_Rig_Character_baseColor.png-09f062fac146d5b11ef505046cb75831.s3tc.ctex"]
+dest_files=["res://.godot/imported/Character_Rig_Character_baseColor.png-09f062fac146d5b11ef505046cb75831.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

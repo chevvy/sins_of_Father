@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://r8wjvsskxegb"]
+[gd_scene load_steps=20 format=3 uid="uid://r8wjvsskxegb"]
 
 [ext_resource type="Script" path="res://Environment/Assets/Clock_001.gd" id="2_8g706"]
 [ext_resource type="Material" uid="uid://cu2ijpfqf4rwy" path="res://Environment/Assets/Clock.tres" id="2_qxpmw"]
+[ext_resource type="LabelSettings" uid="uid://bw7p20pvtm571" path="res://Environment/Preset/Label_Clock.tres" id="3_1m3ax"]
+[ext_resource type="LabelSettings" uid="uid://5b1ew3sxxubj" path="res://Environment/Preset/Label_Title.tres" id="3_6yto3"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ivtvi"]
 _surfaces = [{
@@ -36,9 +38,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ivtvi")
-
-[sub_resource type="LabelSettings" id="LabelSettings_30khm"]
-font_size = 64
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_c54yb"]
 viewport_path = NodePath("Clock_001/SubViewportContainer/SubViewport")
@@ -126,6 +125,8 @@ material_override = ExtResource("2_qxpmw")
 mesh = SubResource("ArrayMesh_sqekq")
 skeleton = NodePath("")
 script = ExtResource("2_8g706")
+preset_clock = ExtResource("3_1m3ax")
+preset_title = ExtResource("3_6yto3")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Clock_001"]
 clip_children = 1
@@ -149,8 +150,9 @@ offset_top = -45.5
 offset_bottom = 45.5
 grow_horizontal = 0
 grow_vertical = 2
-text = "00:00"
-label_settings = SubResource("LabelSettings_30khm")
+text = "Press
+ START"
+label_settings = ExtResource("3_6yto3")
 horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 3
@@ -204,3 +206,9 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_haypa")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Flash_Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Flash_Timer" to="Clock_001" method="_on_flash_timer_timeout"]

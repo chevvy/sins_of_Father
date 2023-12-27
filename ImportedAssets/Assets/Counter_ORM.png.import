@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0glv143352wk"
-path.s3tc="res://.godot/imported/Counter_ORM.png-cdc0a752dc9c60a7b07769c7af1ba230.s3tc.ctex"
+path="res://.godot/imported/Counter_ORM.png-cdc0a752dc9c60a7b07769c7af1ba230.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://ImportedAssets/Assets/Counter_ORM.png"
-dest_files=["res://.godot/imported/Counter_ORM.png-cdc0a752dc9c60a7b07769c7af1ba230.s3tc.ctex"]
+dest_files=["res://.godot/imported/Counter_ORM.png-cdc0a752dc9c60a7b07769c7af1ba230.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
